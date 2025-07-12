@@ -1,0 +1,491 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+
+# 📊 Excel数据处理Web应用程序开发规范
+
+## 🏗️ 项目结构标准
+
+### 📁 目录结构规范
+```
+project_root/
+├── 📁 src/                          # 源代码目录
+│   ├── 📁 web/                      # Web应用层
+│   │   ├── 📄 app.py               # Flask主应用文件
+│   │   ├── 📁 templates/           # Jinja2模板目录
+│   │   │   ├── 📄 base.html        # 基础模板（必须）
+│   │   │   ├── 📄 index.html       # 主页面（上传页面）
+│   │   │   ├── 📄 results.html     # 结果展示页面
+│   │   │   └── 📄 help.html        # 帮助说明页面
+│   │   └── 📁 static/              # 静态资源目录
+│   │       ├── 📁 css/             # 样式文件
+│   │       │   ├── 📄 bootstrap.min.css  # Bootstrap框架
+│   │       │   └── 📄 fontawesome.min.css # 图标字体
+│   │       └── 📁 js/              # JavaScript文件
+│   └── 📁 core/                     # 核心业务逻辑层
+│       └── 📄 *.py                 # 数据处理核心模块
+├── 📁 data/                         # 数据目录
+│   ├── 📁 uploads/                 # 用户上传文件
+│   └── 📁 samples/                 # 示例文件
+├── 📁 output/                       # 输出目录
+│   ├── 📁 results/                 # 处理结果文件
+│   └── 📁 logs/                    # 日志文件
+├── 📁 scripts/                      # 脚本工具
+├── 📁 docs/                         # 文档目录
+├── 📄 requirements.txt             # 依赖包清单
+└── 📄 启动应用.bat                 # Windows启动脚本
+```
+
+### 🎯 文件命名约定
+- **Python文件**: 使用下划线命名法 (`snake_case`)
+- **模板文件**: 使用小写+下划线 (`template_name.html`)
+- **静态文件**: 使用小写+连字符 (`style-name.css`)
+- **目录名**: 使用小写+下划线
+
+## 🐍 Python后端开发规范
+
+### 📋 核心依赖包标准
+```python
+# requirements.txt 标准结构
+# Flask核心框架
+Flask==2.3.3
+Werkzeug==3.1.3
+Jinja2==3.1.6
+
+# Excel数据处理必备
+pandas==2.2.3          # 数据处理核心
+numpy==2.2.6           # 数值计算
+openpyxl==3.1.5        # Excel读写(.xlsx)
+xlrd==2.0.1            # Excel读取(.xls)
+
+# 日期时间处理
+python-dateutil==2.9.0.post0
+pytz==2025.2
+
+# 可选：数据可视化
+matplotlib==3.10.3     # 图表生成
+seaborn==0.13.2        # 统计图表
+```
+
+### 🔧 Flask应用结构模式
+```python
+# app.py 标准结构模板
+from flask import Flask, render_template, request, redirect, url_for, flash, send_file, jsonify
+import os
+import pandas as pd
+from werkzeug.utils import secure_filename
+from datetime import datetime
+import traceback
+import logging
+
+class ExcelWebApp:
+    """📊 Excel数据处理Web应用基类"""
+    
+    def __init__(self, app_name="ExcelProcessor", secret_key=None):
+        self.app = Flask(__name__, 
+                        template_folder='templates',
+                        static_folder='static')
+        self.app.secret_key = secret_key or f'{app_name}-secret-key-2024'
+        self.setup_config()
+        self.setup_logging()
+        self.register_routes()
+    
+    def setup_config(self):
+        """⚙️ 应用配置初始化"""
+        # 文件上传配置
+        self.UPLOAD_FOLDER = self.setup_upload_folder()
+        self.ALLOWED_EXTENSIONS = {'csv', 'xlsx', 'xls'}
+        self.app.config['UPLOAD_FOLDER'] = self.UPLOAD_FOLDER
+        self.app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50MB
+    
+    def setup_upload_folder(self):
+        """📁 设置上传目录（兼容EXE环境）"""
+        if hasattr(sys, '_MEIPASS'):
+            # EXE环境
+            exe_dir = os.path.dirname(sys.executable)
+            upload_folder = os.path.join(exe_dir, 'uploads')
+        else:
+            # 开发环境
+            project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+            upload_folder = os.path.join(project_root, 'data', 'uploads')
+        
+        os.makedirs(upload_folder, exist_ok=True)
+        return upload_folder
+    
+    def setup_logging(self):
+        """📝 日志配置（兼容EXE环境）"""
+        # 实现日志配置逻辑
+        pass
+    
+    def register_routes(self):
+        """🛣️ 注册路由"""
+        @self.app.route('/')
+        def index():
+            """🏠 主页面 - 文件上传界面"""
+            file_requirements = self.get_file_requirements()
+            return render_template('index.html', 
+                                 file_requirements=file_requirements)
+        
+        @self.app.route('/upload', methods=['POST'])
+        def upload_files():
+            """📤 文件上传处理"""
+            return self.handle_file_upload()
+        
+        @self.app.route('/download/<filename>')
+        def download_file(filename):
+            """⬇️ 文件下载"""
+            return self.handle_file_download(filename)
+        
+        @self.app.route('/help')
+        def help_page():
+            """❓ 帮助页面"""
+            return render_template('help.html')
+    
+    def get_file_requirements(self):
+        """📋 定义文件上传要求 - 子类需重写"""
+        return {}
+    
+    def handle_file_upload(self):
+        """📤 处理文件上传逻辑 - 子类需重写"""
+        pass
+    
+    def allowed_file(self, filename):
+        """✅ 检查文件类型是否允许"""
+        return ('.' in filename and 
+                filename.rsplit('.', 1)[1].lower() in self.ALLOWED_EXTENSIONS)
+```
+
+### 📊 Excel数据处理标准模式
+```python
+class ExcelDataProcessor:
+    """📊 Excel数据处理器基类"""
+    
+    @staticmethod
+    def read_excel_safe(file_path, sheet_name=0, header_row=0):
+        """🔍 安全读取Excel文件"""
+        try:
+            if file_path.endswith('.csv'):
+                # CSV文件处理
+                df = pd.read_csv(file_path, header=header_row, encoding='utf-8-sig')
+            else:
+                # Excel文件处理
+                df = pd.read_excel(file_path, sheet_name=sheet_name, header=header_row)
+            
+            logging.info(f"✅ 成功读取文件: {file_path}")
+            logging.info(f"📊 数据形状: {df.shape}")
+            return df
+        except Exception as e:
+            logging.error(f"❌ 读取文件失败: {file_path}, 错误: {str(e)}")
+            raise
+    
+    @staticmethod
+    def validate_required_columns(df, required_columns, file_name="文件"):
+        """🔍 验证必需列是否存在"""
+        missing_columns = []
+        for col in required_columns:
+            if col not in df.columns:
+                missing_columns.append(col)
+        
+        if missing_columns:
+            error_msg = f"❌ {file_name}缺少必需列: {', '.join(missing_columns)}"
+            logging.error(error_msg)
+            raise ValueError(error_msg)
+        
+        logging.info(f"✅ {file_name}列验证通过")
+        return True
+    
+    @staticmethod
+    def safe_write_excel(data_dict, output_path):
+        """💾 安全写入Excel文件（多工作表）"""
+        try:
+            with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
+                for sheet_name, df in data_dict.items():
+                    df.to_excel(writer, sheet_name=sheet_name, index=False)
+            
+            logging.info(f"✅ 成功输出文件: {output_path}")
+            return True
+        except Exception as e:
+            logging.error(f"❌ 输出文件失败: {output_path}, 错误: {str(e)}")
+            raise
+```
+
+## 🎨 前端样式标准
+
+### 🎯 统一UI设计规范
+```html
+<!-- base.html 标准模板结构 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Excel数据处理器{% endblock %}</title>
+    
+    <!-- 🎨 标准CSS资源 -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/fontawesome.min.css') }}" rel="stylesheet">
+    
+    <!-- 🎨 统一样式变量 -->
+    <style>
+        :root {
+            --primary-color: #2c3e50;      /* 主色调 */
+            --secondary-color: #3498db;    /* 次要色调 */
+            --success-color: #27ae60;      /* 成功色 */
+            --warning-color: #f39c12;      /* 警告色 */
+            --danger-color: #e74c3c;       /* 危险色 */
+            --light-gray: #ecf0f1;         /* 浅灰色 */
+            --dark-gray: #95a5a6;          /* 深灰色 */
+        }
+    </style>
+</head>
+```
+
+### 📱 响应式组件标准
+```html
+<!-- 🔄 文件上传区域标准组件 -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <i class="fas fa-upload me-2"></i>{{ file_info.name }}
+            {% if required %}<span class="text-danger">*</span>{% endif %}
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label class="form-label">{{ file_info.description }}</label>
+            <input type="file" class="form-control" name="{{ file_key }}" 
+                   accept=".xlsx,.xls,.csv" {% if required %}required{% endif %}>
+        </div>
+        
+        <!-- 📋 文件要求说明 -->
+        <div class="alert alert-info">
+            <small>
+                <strong>📋 要求:</strong><br>
+                {{ file_info.source|safe }}<br>
+                {{ file_info.format|safe }}<br>
+                <strong>🔑 必需字段:</strong> {{ file_info.required_fields|join(', ') }}
+            </small>
+        </div>
+    </div>
+</div>
+```
+
+### 🎯 标准图标映射
+```css
+/* 🎨 图标emoji备用方案（当字体图标加载失败时） */
+.fa-chart-bar::before { content: "📊"; }
+.fa-file-alt::before { content: "📄"; }
+.fa-upload::before { content: "📤"; }
+.fa-download::before { content: "⬇️"; }
+.fa-check-circle::before { content: "✅"; }
+.fa-exclamation-triangle::before { content: "⚠️"; }
+.fa-tools::before { content: "🔧"; }
+.fa-info-circle::before { content: "ℹ️"; }
+.fa-question-circle::before { content: "❓"; }
+.fa-home::before { content: "🏠"; }
+```
+
+## 🔧 功能模块标准
+
+### 📤 文件上传处理模式
+```python
+def handle_file_upload_standard():
+    """📤 标准文件上传处理流程"""
+    try:
+        # 1️⃣ 验证文件是否上传
+        required_files = ['file1', 'file2', 'file3']
+        uploaded_files = {}
+        
+        for file_key in required_files:
+            if file_key not in request.files:
+                flash(f'❌ 请选择{file_requirements[file_key]["name"]}文件', 'error')
+                return redirect(url_for('index'))
+            
+            file = request.files[file_key]
+            if file.filename == '':
+                flash(f'❌ 请选择{file_requirements[file_key]["name"]}文件', 'error')
+                return redirect(url_for('index'))
+            
+            if not allowed_file(file.filename):
+                flash(f'❌ {file_requirements[file_key]["name"]}文件格式不支持', 'error')
+                return redirect(url_for('index'))
+            
+            # 2️⃣ 保存文件
+            filename = secure_filename(file.filename)
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            safe_filename = f"{timestamp}_{filename}"
+            file_path = os.path.join(app.config['UPLOAD_FOLDER'], safe_filename)
+            file.save(file_path)
+            uploaded_files[file_key] = file_path
+        
+        # 3️⃣ 数据处理
+        result = process_data_analysis(**uploaded_files)
+        
+        # 4️⃣ 清理临时文件
+        for file_path in uploaded_files.values():
+            safe_remove_file(file_path)
+        
+        # 5️⃣ 返回结果
+        return render_template('results.html', 
+                             result_files=result['files'],
+                             summary=result['summary'])
+    
+    except Exception as e:
+        logging.error(f"❌ 处理过程中出现错误: {str(e)}")
+        flash(f'❌ 处理失败: {str(e)}', 'error')
+        return redirect(url_for('index'))
+```
+
+### 🔍 数据验证标准模式
+```python
+def validate_excel_data_standard(df, file_name, requirements):
+    """🔍 标准Excel数据验证流程"""
+    
+    # 1️⃣ 基础验证
+    if df.empty:
+        raise ValueError(f"❌ {file_name}为空文件")
+    
+    # 2️⃣ 列名验证
+    ExcelDataProcessor.validate_required_columns(
+        df, requirements['required_fields'], file_name)
+    
+    # 3️⃣ 数据类型验证
+    for field, dtype in requirements.get('field_types', {}).items():
+        if field in df.columns:
+            try:
+                if dtype == 'datetime':
+                    pd.to_datetime(df[field])
+                elif dtype == 'numeric':
+                    pd.to_numeric(df[field])
+            except:
+                raise ValueError(f"❌ {file_name}的{field}列数据格式错误")
+    
+    # 4️⃣ 业务逻辑验证
+    custom_validations = requirements.get('custom_validations', [])
+    for validation in custom_validations:
+        validation(df, file_name)
+    
+    logging.info(f"✅ {file_name}数据验证通过")
+    return True
+```
+
+## 🚀 最佳实践
+
+### 🎯 错误处理标准
+```python
+# 🛡️ 统一错误处理装饰器
+def handle_errors(func):
+    """🛡️ 统一错误处理装饰器"""
+    def wrapper(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except ValueError as e:
+            logging.error(f"❌ 参数错误: {str(e)}")
+            flash(f'❌ 数据验证失败: {str(e)}', 'error')
+        except FileNotFoundError as e:
+            logging.error(f"❌ 文件未找到: {str(e)}")
+            flash('❌ 文件处理失败，请检查文件是否存在', 'error')
+        except Exception as e:
+            logging.error(f"❌ 系统错误: {str(e)}")
+            flash(f'❌ 系统错误: {str(e)}', 'error')
+        
+        return redirect(url_for('index'))
+    return wrapper
+```
+
+### 📝 日志记录标准
+```python
+def setup_logging_standard():
+    """📝 标准日志配置"""
+    try:
+        # 兼容EXE环境的日志目录设置
+        if hasattr(sys, '_MEIPASS'):
+            exe_dir = os.path.dirname(sys.executable)
+            log_dir = os.path.join(exe_dir, 'logs')
+        else:
+            project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+            log_dir = os.path.join(project_root, 'output', 'logs')
+        
+        os.makedirs(log_dir, exist_ok=True)
+        log_file = os.path.join(log_dir, 'app.log')
+        
+        logging.basicConfig(
+            level=logging.DEBUG,
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            handlers=[
+                logging.StreamHandler(sys.stdout),
+                logging.FileHandler(log_file, encoding='utf-8')
+            ]
+        )
+        logging.info(f"📝 日志文件路径: {log_file}")
+    except Exception as e:
+        logging.basicConfig(level=logging.DEBUG,
+                          format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                          handlers=[logging.StreamHandler(sys.stdout)])
+        logging.warning(f"⚠️ 无法创建日志文件: {str(e)}")
+```
+
+### 🌐 国际化支持
+```python
+# 🌐 使用中文emoji和提示信息
+STANDARD_MESSAGES = {
+    'success': '✅ 处理成功',
+    'error': '❌ 处理失败',
+    'warning': '⚠️ 注意',
+    'info': 'ℹ️ 提示',
+    'uploading': '📤 正在上传...',
+    'processing': '⚙️ 正在处理...',
+    'downloading': '⬇️ 正在下载...'
+}
+```
+
+### 🔧 性能优化指南
+1. **📊 大文件处理**: 使用`pandas.read_excel(chunksize=1000)`分块读取
+2. **💾 内存管理**: 及时清理临时变量和文件
+3. **⚡ 缓存策略**: 对重复计算结果进行缓存
+4. **🔄 异步处理**: 对耗时操作考虑使用Celery等异步任务队列
+
+### 🛡️ 安全最佳实践
+1. **📁 文件验证**: 严格验证上传文件类型和大小
+2. **🔒 路径安全**: 使用`secure_filename()`处理文件名
+3. **🧹 临时文件**: 及时清理临时上传文件
+4. **📝 日志安全**: 不在日志中记录敏感信息
+
+## 📦 部署标准
+
+### 🐳 依赖包管理
+```bash
+# 📦 安装依赖包（使用国内镜像源）
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
+
+# 🔧 生成requirements.txt
+pip freeze > requirements.txt
+```
+
+### 🚀 启动脚本标准
+```batch
+@echo off
+:: 启动应用.bat
+chcp 65001
+echo 🚀 正在启动Excel数据处理器...
+cd /d "%~dp0"
+python src/web/app.py
+pause
+```
+
+---
+
+## 🎯 总结
+
+这个cursor rules提供了：
+- 🏗️ **统一的项目结构**：标准化的目录组织和文件命名
+- 🎨 **一致的UI样式**：基于Bootstrap的响应式设计模板  
+- 🔧 **通用的功能模块**：文件上传、数据处理、结果展示的标准流程
+- 🛡️ **完善的错误处理**：统一的异常处理和用户友好的错误提示
+- 📝 **标准化的日志**：兼容开发和生产环境的日志配置
+- 🚀 **最佳实践指南**：性能优化、安全考虑和部署标准
+
+
+遵循这些规范，可以快速构建功能完善、样式统一的Excel数据处理Web应用程序！🎉

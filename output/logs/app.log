@@ -1,0 +1,728 @@
+2025-06-15 15:49:01,168 - root - INFO - ======= 测试日期范围检查功能 =======
+2025-06-15 15:49:01,171 - root - INFO - 日期 2023-10-15 在旺季内
+2025-06-15 15:49:01,171 - root - INFO - 日期 2023-11-01 在旺季内
+2025-06-15 15:49:01,172 - root - INFO - 日期 2023-12-31 在旺季内
+2025-06-15 15:49:01,172 - root - INFO - 日期 2024-01-14 在旺季内
+2025-06-15 15:49:01,172 - root - INFO - 日期 2023-10-14 不在旺季内
+2025-06-15 15:49:01,172 - root - INFO - 日期 2024-01-15 不在旺季内
+2025-06-15 15:49:01,172 - root - INFO - 日期 2023-02-01 不在旺季内
+2025-06-15 15:49:01,172 - root - INFO - 日期 2023-09-01 不在旺季内
+2025-06-15 15:49:01,172 - root - INFO - ======= 日期范围检查测试完成 =======
+2025-06-15 15:49:01,201 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:27137
+ * Running on http://192.168.0.105:27137
+2025-06-15 15:49:01,201 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-15 15:49:08,984 - root - INFO - ======= 测试日期范围检查功能 =======
+2025-06-15 15:49:08,987 - root - INFO - 日期 2023-10-15 在旺季内
+2025-06-15 15:49:08,987 - root - INFO - 日期 2023-11-01 在旺季内
+2025-06-15 15:49:08,987 - root - INFO - 日期 2023-12-31 在旺季内
+2025-06-15 15:49:08,987 - root - INFO - 日期 2024-01-14 在旺季内
+2025-06-15 15:49:08,987 - root - INFO - 日期 2023-10-14 不在旺季内
+2025-06-15 15:49:08,987 - root - INFO - 日期 2024-01-15 不在旺季内
+2025-06-15 15:49:08,988 - root - INFO - 日期 2023-02-01 不在旺季内
+2025-06-15 15:49:08,988 - root - INFO - 日期 2023-09-01 不在旺季内
+2025-06-15 15:49:08,988 - root - INFO - ======= 日期范围检查测试完成 =======
+2025-06-15 15:49:09,009 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:27149
+ * Running on http://192.168.0.105:27149
+2025-06-15 15:49:09,009 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-15 15:50:51,621 - root - INFO - ======= 测试日期范围检查功能 =======
+2025-06-15 15:50:51,624 - root - INFO - 日期 2023-10-15 在旺季内
+2025-06-15 15:50:51,625 - root - INFO - 日期 2023-11-01 在旺季内
+2025-06-15 15:50:51,625 - root - INFO - 日期 2023-12-31 在旺季内
+2025-06-15 15:50:51,625 - root - INFO - 日期 2024-01-14 在旺季内
+2025-06-15 15:50:51,625 - root - INFO - 日期 2023-10-14 不在旺季内
+2025-06-15 15:50:51,625 - root - INFO - 日期 2024-01-15 不在旺季内
+2025-06-15 15:50:51,625 - root - INFO - 日期 2023-02-01 不在旺季内
+2025-06-15 15:50:51,625 - root - INFO - 日期 2023-09-01 不在旺季内
+2025-06-15 15:50:51,625 - root - INFO - ======= 日期范围检查测试完成 =======
+2025-06-15 15:50:51,645 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:27349
+ * Running on http://192.168.0.105:27349
+2025-06-15 15:50:51,645 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-15 15:52:18,911 - werkzeug - INFO - 127.0.0.1 - - [15/Jun/2025 15:52:18] "GET / HTTP/1.1" 200 -
+2025-06-15 15:58:39,723 - root - INFO - ======= 测试日期范围检查功能 =======
+2025-06-15 15:58:39,726 - root - INFO - 日期 2023-10-15 在旺季内
+2025-06-15 15:58:39,726 - root - INFO - 日期 2023-11-01 在旺季内
+2025-06-15 15:58:39,726 - root - INFO - 日期 2023-12-31 在旺季内
+2025-06-15 15:58:39,726 - root - INFO - 日期 2024-01-14 在旺季内
+2025-06-15 15:58:39,726 - root - INFO - 日期 2023-10-14 不在旺季内
+2025-06-15 15:58:39,726 - root - INFO - 日期 2024-01-15 不在旺季内
+2025-06-15 15:58:39,726 - root - INFO - 日期 2023-02-01 不在旺季内
+2025-06-15 15:58:39,727 - root - INFO - 日期 2023-09-01 不在旺季内
+2025-06-15 15:58:39,727 - root - INFO - ======= 日期范围检查测试完成 =======
+2025-06-15 15:58:39,749 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:28345
+ * Running on http://192.168.0.105:28345
+2025-06-15 15:58:39,750 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-15 16:02:57,499 - root - INFO - ======= 测试日期范围检查功能 =======
+2025-06-15 16:02:57,503 - root - INFO - 日期 2023-10-15 在旺季内
+2025-06-15 16:02:57,503 - root - INFO - 日期 2023-11-01 在旺季内
+2025-06-15 16:02:57,503 - root - INFO - 日期 2023-12-31 在旺季内
+2025-06-15 16:02:57,503 - root - INFO - 日期 2024-01-14 在旺季内
+2025-06-15 16:02:57,503 - root - INFO - 日期 2023-10-14 不在旺季内
+2025-06-15 16:02:57,504 - root - INFO - 日期 2024-01-15 不在旺季内
+2025-06-15 16:02:57,504 - root - INFO - 日期 2023-02-01 不在旺季内
+2025-06-15 16:02:57,504 - root - INFO - 日期 2023-09-01 不在旺季内
+2025-06-15 16:02:57,504 - root - INFO - ======= 日期范围检查测试完成 =======
+2025-06-15 16:02:57,533 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:28884
+ * Running on http://192.168.0.105:28884
+2025-06-15 16:02:57,534 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-15 16:02:59,942 - werkzeug - INFO - 127.0.0.1 - - [15/Jun/2025 16:02:59] "GET / HTTP/1.1" 200 -
+2025-06-15 16:03:00,057 - werkzeug - INFO - 127.0.0.1 - - [15/Jun/2025 16:03:00] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-06-15 16:03:00,059 - werkzeug - INFO - 127.0.0.1 - - [15/Jun/2025 16:03:00] "GET /static/css/fontawesome.min.css HTTP/1.1" 200 -
+2025-06-15 16:03:00,061 - werkzeug - INFO - 127.0.0.1 - - [15/Jun/2025 16:03:00] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-06-15 16:03:00,277 - werkzeug - INFO - 127.0.0.1 - - [15/Jun/2025 16:03:00] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-15 16:03:00,307 - werkzeug - INFO - 127.0.0.1 - - [15/Jun/2025 16:03:00] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-15 16:03:00,781 - werkzeug - INFO - 127.0.0.1 - - [15/Jun/2025 16:03:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-19 15:24:31,171 - root - INFO - 日志文件路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\output\logs\app.log
+2025-06-19 15:24:31,177 - root - INFO - ======= 测试日期范围检查功能 =======
+2025-06-19 15:24:31,185 - root - INFO - 日期 2023-10-15 在旺季内
+2025-06-19 15:24:31,185 - root - INFO - 日期 2023-11-01 在旺季内
+2025-06-19 15:24:31,185 - root - INFO - 日期 2023-12-31 在旺季内
+2025-06-19 15:24:31,186 - root - INFO - 日期 2024-01-14 在旺季内
+2025-06-19 15:24:31,186 - root - INFO - 日期 2023-10-14 不在旺季内
+2025-06-19 15:24:31,186 - root - INFO - 日期 2024-01-15 不在旺季内
+2025-06-19 15:24:31,187 - root - INFO - 日期 2023-02-01 不在旺季内
+2025-06-19 15:24:31,187 - root - INFO - 日期 2023-09-01 不在旺季内
+2025-06-19 15:24:31,187 - root - INFO - ======= 日期范围检查测试完成 =======
+2025-06-19 15:24:31,220 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5617
+ * Running on http://192.168.0.105:5617
+2025-06-19 15:24:31,221 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 15:24:37,420 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 15:24:37] "GET / HTTP/1.1" 200 -
+2025-06-19 15:24:37,512 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 15:24:37] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-06-19 15:24:37,514 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 15:24:37] "GET /static/css/fontawesome.min.css HTTP/1.1" 200 -
+2025-06-19 15:24:37,514 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 15:24:37] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-06-19 15:24:37,655 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 15:24:37] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 15:24:37,664 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 15:24:37] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 15:24:37,967 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 15:24:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-19 15:25:22,099 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 15:25:22] "POST /check_order_profit HTTP/1.1" 200 -
+2025-06-19 16:12:59,764 - root - INFO - 日志文件路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\output\logs\app.log
+2025-06-19 16:12:59,769 - root - INFO - ======= 测试日期范围检查功能 =======
+2025-06-19 16:12:59,774 - root - INFO - 日期 2023-10-15 在旺季内
+2025-06-19 16:12:59,775 - root - INFO - 日期 2023-11-01 在旺季内
+2025-06-19 16:12:59,775 - root - INFO - 日期 2023-12-31 在旺季内
+2025-06-19 16:12:59,775 - root - INFO - 日期 2024-01-14 在旺季内
+2025-06-19 16:12:59,775 - root - INFO - 日期 2023-10-14 不在旺季内
+2025-06-19 16:12:59,775 - root - INFO - 日期 2024-01-15 不在旺季内
+2025-06-19 16:12:59,776 - root - INFO - 日期 2023-02-01 不在旺季内
+2025-06-19 16:12:59,776 - root - INFO - 日期 2023-09-01 不在旺季内
+2025-06-19 16:12:59,776 - root - INFO - ======= 日期范围检查测试完成 =======
+2025-06-19 16:13:00,818 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:17637
+ * Running on http://10.126.0.62:17637
+2025-06-19 16:13:00,820 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 16:13:05,224 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:13:05] "GET / HTTP/1.1" 200 -
+2025-06-19 16:13:05,320 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:13:05] "GET /static/css/fontawesome.min.css HTTP/1.1" 200 -
+2025-06-19 16:13:05,320 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:13:05] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-06-19 16:13:05,320 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:13:05] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-06-19 16:13:05,442 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:13:05] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:13:05,459 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:13:05] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:13:05,727 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:13:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-19 16:14:05,459 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:14:05] "GET /help HTTP/1.1" 200 -
+2025-06-19 16:14:05,473 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:14:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:14:05,474 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:14:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:14:05,474 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:14:05] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:14:05,633 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:14:05] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:14:05,667 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:14:05] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:14:07,045 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:14:07] "GET / HTTP/1.1" 200 -
+2025-06-19 16:14:07,056 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:14:07] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:14:07,056 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:14:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:14:07,056 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:14:07] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:14:07,197 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:14:07] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:14:07,225 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:14:07] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:14:56,317 - root - INFO - ✅ 国家检查通过：所有订单都来自 美国
+2025-06-19 16:14:56,361 - root - INFO - ✅ 国家检查通过：所有订单都来自 美国
+2025-06-19 16:14:56,372 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:14:56] "POST /check_order_profit HTTP/1.1" 200 -
+2025-06-19 16:18:15,284 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:18:15] "POST /check_hual_msku HTTP/1.1" 200 -
+2025-06-19 16:18:18,682 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:18:18] "POST /check_product_info HTTP/1.1" 200 -
+2025-06-19 16:18:25,704 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:18:25] "POST /check_msku_profit HTTP/1.1" 200 -
+2025-06-19 16:18:33,592 - root - INFO - ✅ MSKU报表国家检查通过：所有数据都来自 美国
+2025-06-19 16:18:35,442 - root - INFO - ✅ MSKU报表配送周期检查通过：所有日期范围都在淡季配送费结算周期内
+2025-06-19 16:18:35,442 - root - WARNING - ⚠️ MSKU报表未找到'费用类型'列，跳过费用类型检查
+2025-06-19 16:18:35,447 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:18:35] "POST /check_msku_profit HTTP/1.1" 200 -
+2025-06-19 16:18:41,396 - root - INFO - 
+===== 开始处理文件上传 =====
+2025-06-19 16:18:41,396 - root - INFO - 请求方法: POST
+2025-06-19 16:18:41,507 - root - INFO - 表单数据: []
+2025-06-19 16:18:41,508 - root - INFO - 文件数据: ['order_profit', 'hual_msku', 'product_info', 'msku_profit']
+2025-06-19 16:18:41,508 - root - INFO - 订单利润报表文件名: 利润报表-订单-6.1-6.19.xlsx
+2025-06-19 16:18:41,508 - root - INFO - 保存订单利润报表: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250619_161841_order_profit_--6.1-6.19.xlsx
+2025-06-19 16:18:41,524 - root - INFO - 
+***** 强制检查订单利润报表日期范围 *****
+2025-06-19 16:18:41,524 - root - INFO - 📄 读取Excel文件，表头在第二行
+2025-06-19 16:18:47,109 - root - INFO - ✅ 成功读取订单数据，共28534行
+2025-06-19 16:18:47,109 - root - INFO - 📊 数据列: ['店铺', '国家', '币种', '下单时间', '付款时间', '发货时间', '结算时间', '转账时间', '订单号', 'Settlement Id', '结算编号', 'MSKU', 'FNSKU', 'ASIN', '父asin', '品名', 'SKU', '账单类型', '费用类型', '订单类型', '描述', '结算状态', '转账状态', '数量', 'Listing负责人', '开发负责人', '销售额', '销售税', '买家运费', '买家运费税', '礼品包装', '礼品包装税', '积分', '促销折扣', '促销折扣税', '代扣代缴增值税', '低价值商品税', '市场预扣税', 'TCS_CGST', 'TCS_SGST', 'TCS_IGST', '平台费', 'FBA费', '其他交易费', '其他', '隐藏税', '亚马逊结算小计', '采购成本', '头程费用', '其他成本', '站外推广费', '结算订单毛利润', '结算订单毛利润率', '促销编码']
+2025-06-19 16:18:47,113 - root - INFO - ✅ 国家检查通过：所有订单都来自 美国
+2025-06-19 16:18:47,113 - root - INFO - 📅 结算时间样例: ['2025-10-07 17:57:02', '2025-10-07 17:56:47', '2025-10-07 17:56:14']
+2025-06-19 16:18:47,126 - root - INFO - ✅ 结算时间转换成功，数据类型: datetime64[ns]
+2025-06-19 16:18:47,126 - root - INFO - 📅 订单日期范围: 2025-06-01 至 2025-10-07
+2025-06-19 16:18:47,127 - root - INFO - 检查所有订单日期...
+2025-06-19 16:18:47,148 - root - INFO - ✓ 旺季区间内订单数: 0
+2025-06-19 16:18:47,149 - root - INFO - ✗ 非旺季区间内订单数: 28534
+2025-06-19 16:18:47,149 - root - INFO - 总订单数: 28534
+2025-06-19 16:18:47,168 - root - ERROR - ❌ 发现28534条订单不在美国旺季区间内，例如: ['2025-10-07', '2025-10-07', '2025-10-07', '2025-10-07', '2025-10-07']
+2025-06-19 16:18:47,168 - root - ERROR - ❌ 日期范围检查失败：发现28534条订单不在美国旺季区间(10月15日00:00-次年1月14日24:59)内。您上传的订单日期范围为2025-06-01至2025-10-07，请确保所有订单都在旺季区间内。
+2025-06-19 16:18:47,178 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:18:47] "[32mPOST /upload HTTP/1.1[0m" 302 -
+2025-06-19 16:18:47,184 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:18:47] "GET / HTTP/1.1" 200 -
+2025-06-19 16:18:47,210 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:18:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:18:47,211 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:18:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:18:47,212 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:18:47] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:18:47,239 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:18:47] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:18:47,265 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:18:47] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:19:52,489 - root - INFO - ✅ 国家检查通过：所有订单都来自 美国
+2025-06-19 16:19:52,526 - root - INFO - ✅ 国家检查通过：所有订单都来自 美国
+2025-06-19 16:19:52,535 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:19:52] "POST /check_order_profit HTTP/1.1" 200 -
+2025-06-19 16:22:56,286 - root - INFO - 日志文件路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\output\logs\app.log
+2025-06-19 16:22:56,292 - root - INFO - ======= 测试日期范围检查功能 =======
+2025-06-19 16:22:56,297 - root - INFO - 日期 2023-10-15 在旺季内
+2025-06-19 16:22:56,297 - root - INFO - 日期 2023-11-01 在旺季内
+2025-06-19 16:22:56,297 - root - INFO - 日期 2023-12-31 在旺季内
+2025-06-19 16:22:56,297 - root - INFO - 日期 2024-01-14 在旺季内
+2025-06-19 16:22:56,298 - root - INFO - 日期 2023-10-14 不在旺季内
+2025-06-19 16:22:56,298 - root - INFO - 日期 2024-01-15 不在旺季内
+2025-06-19 16:22:56,298 - root - INFO - 日期 2023-02-01 不在旺季内
+2025-06-19 16:22:56,299 - root - INFO - 日期 2023-09-01 不在旺季内
+2025-06-19 16:22:56,299 - root - INFO - ======= 日期范围检查测试完成 =======
+2025-06-19 16:22:57,342 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:19470
+ * Running on http://10.126.0.62:19470
+2025-06-19 16:22:57,343 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 16:23:01,035 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:23:01] "GET / HTTP/1.1" 200 -
+2025-06-19 16:23:01,127 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:23:01] "GET /static/css/fontawesome.min.css HTTP/1.1" 200 -
+2025-06-19 16:23:01,128 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:23:01] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-06-19 16:23:01,129 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:23:01] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-06-19 16:23:01,261 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:23:01] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:23:01,279 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:23:01] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:23:01,548 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:23:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-19 16:23:21,268 - root - INFO - ✅ 国家检查通过：所有订单都来自 美国
+2025-06-19 16:23:21,311 - root - INFO - ✅ 国家检查通过：所有订单都来自 美国
+2025-06-19 16:23:21,322 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:23:21] "POST /check_order_profit HTTP/1.1" 200 -
+2025-06-19 16:23:24,779 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:23:24] "POST /check_hual_msku HTTP/1.1" 200 -
+2025-06-19 16:23:31,162 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:23:31] "POST /check_product_info HTTP/1.1" 200 -
+2025-06-19 16:23:50,638 - root - INFO - ✅ MSKU报表国家检查通过：所有数据都来自 美国
+2025-06-19 16:23:52,432 - root - INFO - ✅ MSKU报表配送周期检查通过：所有日期范围都在淡季配送费结算周期内
+2025-06-19 16:23:52,433 - root - WARNING - ⚠️ MSKU报表未找到'费用类型'列，跳过费用类型检查
+2025-06-19 16:23:52,439 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:23:52] "POST /check_msku_profit HTTP/1.1" 200 -
+2025-06-19 16:23:53,293 - root - INFO - 
+===== 开始处理文件上传 =====
+2025-06-19 16:23:53,294 - root - INFO - 请求方法: POST
+2025-06-19 16:23:53,368 - root - INFO - 表单数据: []
+2025-06-19 16:23:53,368 - root - INFO - 文件数据: ['order_profit', 'hual_msku', 'product_info', 'msku_profit']
+2025-06-19 16:23:53,368 - root - INFO - 订单利润报表文件名: 利润报表-订单-6.1-6.19.xlsx
+2025-06-19 16:23:53,369 - root - INFO - 保存订单利润报表: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250619_162353_order_profit_--6.1-6.19.xlsx
+2025-06-19 16:23:53,392 - root - INFO - 
+***** 强制检查订单利润报表日期范围 *****
+2025-06-19 16:23:53,392 - root - INFO - 📄 读取Excel文件，表头在第二行
+2025-06-19 16:23:58,916 - root - INFO - ✅ 成功读取订单数据，共28534行
+2025-06-19 16:23:58,916 - root - INFO - 📊 数据列: ['店铺', '国家', '币种', '下单时间', '付款时间', '发货时间', '结算时间', '转账时间', '订单号', 'Settlement Id', '结算编号', 'MSKU', 'FNSKU', 'ASIN', '父asin', '品名', 'SKU', '账单类型', '费用类型', '订单类型', '描述', '结算状态', '转账状态', '数量', 'Listing负责人', '开发负责人', '销售额', '销售税', '买家运费', '买家运费税', '礼品包装', '礼品包装税', '积分', '促销折扣', '促销折扣税', '代扣代缴增值税', '低价值商品税', '市场预扣税', 'TCS_CGST', 'TCS_SGST', 'TCS_IGST', '平台费', 'FBA费', '其他交易费', '其他', '隐藏税', '亚马逊结算小计', '采购成本', '头程费用', '其他成本', '站外推广费', '结算订单毛利润', '结算订单毛利润率', '促销编码']
+2025-06-19 16:23:58,921 - root - INFO - ✅ 国家检查通过：所有订单都来自 美国
+2025-06-19 16:23:58,922 - root - INFO - 📅 结算时间样例: ['2025-10-07 17:57:02', '2025-10-07 17:56:47', '2025-10-07 17:56:14']
+2025-06-19 16:23:58,937 - root - INFO - ✅ 结算时间转换成功，数据类型: datetime64[ns]
+2025-06-19 16:23:58,939 - root - INFO - 📅 订单日期范围: 2025-06-01 至 2025-10-07
+2025-06-19 16:23:58,940 - root - INFO - 检查所有订单日期...
+2025-06-19 16:23:58,964 - root - INFO - ✓ 旺季区间内订单数: 0
+2025-06-19 16:23:58,964 - root - INFO - ✗ 非旺季区间内订单数: 28534
+2025-06-19 16:23:58,964 - root - INFO - 总订单数: 28534
+2025-06-19 16:23:58,964 - root - INFO - ✅ 配送周期检查通过！所有订单都在淡季配送费结算周期内
+2025-06-19 16:23:58,965 - root - INFO - 订单统计：淡季订单 28534 条
+2025-06-19 16:23:58,965 - root - INFO - 
+----- 处理hual_msku文件 -----
+2025-06-19 16:23:58,965 - root - INFO - 文件名: Hual商品列表.xlsx
+2025-06-19 16:23:58,966 - root - INFO - 保存路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250619_162358_hual_msku_Hual.xlsx
+2025-06-19 16:23:58,966 - root - INFO - ✅ hual_msku文件保存成功
+2025-06-19 16:23:58,967 - root - INFO - 
+----- 处理product_info文件 -----
+2025-06-19 16:23:58,967 - root - INFO - 文件名: 产品资料SKC关系-VATIN-US.xlsx
+2025-06-19 16:23:58,967 - root - INFO - 保存路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250619_162358_product_info_SKC-VATIN-US.xlsx
+2025-06-19 16:23:58,967 - root - INFO - ✅ product_info文件保存成功
+2025-06-19 16:23:58,967 - root - INFO - 
+===== 所有必要文件上传完成 =====
+2025-06-19 16:23:58,975 - root - INFO - ✅ 可选文件 msku_profit 上传成功: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250619_162358_msku_profit_-MSKU-6.1-6.19.xlsx
+2025-06-19 16:23:58,975 - root - INFO - 
+===== 开始处理分析 =====
+2025-06-19 16:24:25,209 - root - INFO - 🔍 正在筛选正常订单用于配送费分析...
+2025-06-19 16:24:25,220 - root - INFO - 📊 数据筛选结果：
+2025-06-19 16:24:25,220 - root - INFO -    总订单数：28534
+2025-06-19 16:24:25,220 - root - INFO -    正常订单数：10778
+2025-06-19 16:24:25,222 - root - INFO -    异常订单数：17756
+2025-06-19 16:24:25,222 - root - INFO -    异常订单占比：62.23%
+2025-06-19 16:24:25,222 - root - INFO - 正在关联产品资料表获取SKU和SKC信息...
+2025-06-19 16:24:25,223 - root - INFO - 产品资料表列: ['MSKU', 'FNSKU', '状态', '店铺', '国家', '变体属性', '品名', 'SKU', '商品标签', 'SKC', '品质']
+2025-06-19 16:24:25,223 - root - INFO - 产品资料表行数: 2099
+2025-06-19 16:24:25,239 - root - INFO - 关联后数据行数: 10778
+2025-06-19 16:24:25,239 - root - INFO - 关联后数据列: ['店铺', '国家', '币种', '下单时间', '付款时间', '发货时间', '结算时间', '转账时间', '订单号', 'Settlement Id', '结算编号', 'MSKU', 'FNSKU', 'ASIN', '父asin', '品名', '订单MSKU', '账单类型', '费用类型', '订单类型', '描述', '结算状态', '转账状态', '数量', 'Listing负责人', '开发负责人', '销售额', '销售税', '买家运费', '买家运费税', '礼品包装', '礼品包装税', '积分', '促销折扣', '促销折扣税', '代扣代缴增值税', '低价值商品税', '市场预扣税', 'TCS_CGST', 'TCS_SGST', 'TCS_IGST', '平台费', 'FBA费', '其他交易费', '其他', '隐藏税', '亚马逊结算小计', '采购成本', '头程费用', '其他成本', '站外推广费', '结算订单毛利润', '结算订单毛利润率', '促销编码', '实际配送费', 'SKU', 'SKC']
+2025-06-19 16:24:25,240 - root - INFO - SKU列: 有效数据6745行, 空值4033行
+2025-06-19 16:24:25,241 - root - INFO - SKC列: 有效数据6745行, 空值4033行
+2025-06-19 16:24:25,242 - root - INFO - 找到店铺列: 店铺
+2025-06-19 16:24:25,242 - root - INFO - 成功关联产品信息，关联后数据行数: 10778
+2025-06-19 16:24:25,242 - root - INFO - 正在生成MSKU维度汇总（包含店铺信息）...
+2025-06-19 16:24:25,250 - root - INFO - MSKU维度汇总完成，共1907条记录
+2025-06-19 16:24:25,250 - root - INFO - 正在进行SKC配送费异常检查...
+2025-06-19 16:24:26,151 - root - INFO - SKC配送费异常检查完成，发现863个异常记录
+2025-06-19 16:24:49,649 - root - INFO - 🔧 开始MSKU维度利润报表校正...
+2025-06-19 16:24:49,649 - root - INFO - 📄 读取MSKU维度利润报表: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250619_162358_msku_profit_-MSKU-6.1-6.19.xlsx
+2025-06-19 16:24:53,421 - root - INFO - ✅ 成功读取MSKU维度利润报表，共4785行
+2025-06-19 16:24:53,421 - root - INFO - 📊 数据列: ['日期', '型号', 'MSKU', 'ASIN', '父ASIN', '店铺', '国家', '品名', 'SKU', '标题', 'Listing负责人', '开发负责人', '一级分类', '二级分类', '三级分类', '品牌', '币种', 'Listing标签', 'FBA销量', 'FBM销量', 'FBM补（换）货量', 'FBM补（换）货退回量', 'FBA补（换）货量', 'FBA补（换）货退回量', '多渠道销量', 'SP广告销售额', 'SD广告销售额', 'SB广告销售额', 'SBV广告销售额', 'SP广告销量', 'SD广告销量', 'SB广告销量', 'SBV广告销量', 'FBA销售额', 'FBM销售额', '买家运费', '促销折扣', 'FBA库存赔偿', '赔偿量', 'COD', '退款量', '退款率', '退货量（可售）', '退货量（不可售）', '退货率', '包装收入', '买家交易保障索赔额', '积分抵减收入', '清算收入', '亚马逊运费赔偿', 'Safe-T索赔', 'Netco交易', '赔偿收入', '追索收入', '其他收入-其他', '清算调整', '混合VAT收入', 'FBM销售退款额', 'FBA销售退款额', '买家运费退款额', '买家包装退款额', '促销折扣退款额', '买家拒付', '积分抵减退回', '平台费退款项', '发货费退款项', '其他订单费退款项', '运输标签费退款', '交易费用退款额', '积分费用', '广告退款额', '平台费', 'FBA发货费(FBA)', '亚马逊物流客户退货费', 'FBA发货费(多渠道)', '其他订单费用', 'FBA国际物流货运费', '调整费用', 'SP广告', 'SD广告', 'SB广告', 'SBV广告', '差异分摊', '订阅费', '秒杀费', '优惠券', '早期评论人计划', 'VINE', '其他仓储费', '月仓储费', '月仓储费差异', '月仓储费本月计提', '月仓储费上月冲销', '长期仓储费', '长期仓储费差异', '长期仓储费本月计提', '长期仓储费上月冲销', '库存续订费用', 'FBA销毁费', '销毁量', 'FBA移除费', '移除量', '入仓手续费', '标签费', '塑料包装费', 'FBA卖家退回费', 'FBA仓储费-入库缺陷费', '库存调整费', '合作承运费', '入库配置费（原合仓费）', '超量仓储费', '泡沫包装费', '胶带费', 'AWD处理费', 'AWD运输费', 'AWD仓储费', '卫星仓仓储费', '购买配送费（原运输标签费）', '承运人装运标签调整费', '其他服务费', '人工处理费用', '清算费', 'MFNPostageFee', '站外推广费', '财务费用', '其他费用-发AWD仓库费用', '管理费用', '销售费用（线下）', 'TCS_IGST', 'TCS_SGST', 'TCS_CGST', '混合VAT', 'VAT/GST', '商品税调整', '礼品包装税', '买家运费税', '促销折扣税', '商品价格税', 'TCS_IGST.1', 'TCS_SGST.1', 'TCS_CGST.1', 'VAT/GST.1', '礼品包装税.1', '买家运费税.1', '促销折扣税.1', '商品价格税.1', '市场税', '市场税退款额', '混合网络费', '采购成本', '采购均价', '采购占比', '头程成本', '头程均价', '头程占比', '其他成本', '其他均价', '其他占比', '合计成本', '合计成本占比', '毛利润', '毛利率', 'ROI', 'FBA盘点入库数量', 'FBA无源单退货数量', 'FBA有源单退货数量', 'FBA移除数量', 'FBA盘点出库数量', 'FBA补发货销售数量', 'FBA多渠道销售订单数量', 'FBA销售订单数量', '自发货亚马逊销售出库数量', '自发货多平台销售出库数量', 'FBA预估销售成本数量', 'FBA盘点入库采购成本', 'FBA无源单退货采购成本', 'FBA有源单退货采购成本', 'FBA移除采购成本', 'FBA盘点出库采购成本', 'FBA补发货销售采购成本', 'FBA多渠道销售订单采购成本', 'FBA销售订单采购成本', '自发货亚马逊销售出库采购成本', '自发货多平台销售出库采购成本', 'FBA预估销售成本采购成本', 'FBA盘点入库物流成本', 'FBA无源单退货物流成本', 'FBA有源单退货物流成本', 'FBA移除物流成本', 'FBA盘点出库物流成本', 'FBA补发货销售物流成本', 'FBA多渠道销售订单物流成本', 'FBA销售订单物流成本', '自发货亚马逊销售出库物流成本', '自发货多平台销售出库物流成本', 'FBA预估销售成本物流成本', 'FBA盘点入库其他成本', 'FBA无源单退货其他成本', 'FBA有源单退货其他成本', 'FBA移除其他成本', 'FBA盘点出库其他成本', 'FBA补发货销售其他成本', 'FBA多渠道销售订单其他成本', 'FBA销售订单其他成本', '自发货亚马逊销售出库其他成本', '自发货多平台销售出库其他成本', 'FBA预估销售成本其他成本']
+2025-06-19 16:24:53,422 - root - INFO - 📊 计算异常订单费用汇总...
+2025-06-19 16:24:53,434 - root - INFO - ✅ 异常订单费用汇总完成，涉及1297个MSKU
+2025-06-19 16:24:53,435 - root - INFO - 📊 创建SKC最低配送费字典...
+2025-06-19 16:24:53,453 - root - INFO - ✅ SKC最低配送费字典创建完成，包含128个SKC
+2025-06-19 16:24:53,453 - root - INFO - 📊 创建SKC最低头程均价字典...
+2025-06-19 16:24:53,470 - root - INFO - ✅ SKC最低头程均价字典创建完成，包含128个SKC
+2025-06-19 16:24:53,476 - root - INFO - 🔧 执行异常订单费用校正...
+2025-06-19 16:24:54,010 - root - INFO - ✅ 异常订单费用校正完成，校正了957个MSKU
+2025-06-19 16:24:54,010 - root - INFO - 🔧 执行FBA配送费理想校正...
+2025-06-19 16:24:54,190 - root - INFO - ✅ FBA配送费理想校正完成，校正了1631个MSKU
+2025-06-19 16:24:54,190 - root - INFO - 🔧 执行头程成本理想校正...
+2025-06-19 16:24:54,371 - root - INFO - ✅ 头程成本理想校正完成，校正了1629个MSKU
+2025-06-19 16:25:15,672 - root - INFO - ✅ 分析成功完成
+2025-06-19 16:25:15,688 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:25:15] "POST /upload HTTP/1.1" 200 -
+2025-06-19 16:25:15,738 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:25:15] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:25:15,738 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:25:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:25:15,738 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:25:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:25:15,765 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:25:15] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:25:15,795 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:25:15] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:25:17,749 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:25:17] "HEAD /download/异常订单数据_20250619_162404.xlsx HTTP/1.1" 200 -
+2025-06-19 16:25:17,760 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:25:17] "HEAD /download/配送费分析_20250619_162404.xlsx HTTP/1.1" 200 -
+2025-06-19 16:25:17,769 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:25:17] "HEAD /download/MSKU利润报表校正结果_20250619_162404.xlsx HTTP/1.1" 200 -
+2025-06-19 16:36:38,169 - root - INFO - 日志文件路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\output\logs\app.log
+2025-06-19 16:36:39,611 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.126.0.62:5000
+2025-06-19 16:36:39,612 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 16:36:44,393 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:36:44] "GET / HTTP/1.1" 200 -
+2025-06-19 16:36:44,488 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:36:44] "GET /static/css/fontawesome.min.css HTTP/1.1" 200 -
+2025-06-19 16:36:44,490 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:36:44] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-06-19 16:36:44,490 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:36:44] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-06-19 16:36:44,596 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:36:44] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:36:44,610 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:36:44] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:36:44,926 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 16:36:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-19 16:37:50,031 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:50] "GET / HTTP/1.1" 200 -
+2025-06-19 16:37:50,053 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:50] "GET /static/css/fontawesome.min.css HTTP/1.1" 200 -
+2025-06-19 16:37:50,067 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:50] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-06-19 16:37:50,067 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:50] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-06-19 16:37:50,118 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:50] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:37:50,124 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:50] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:37:50,145 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-19 16:37:54,739 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:54] "GET / HTTP/1.1" 200 -
+2025-06-19 16:37:54,756 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:54,758 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:54] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:54,760 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:37:54,779 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:54] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:37:54,787 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:54] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:37:55,502 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:55] "GET / HTTP/1.1" 200 -
+2025-06-19 16:37:55,522 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:55,525 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:55] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:55,525 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:37:55,544 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:55] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:37:55,556 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:55] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:37:56,141 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:56] "GET / HTTP/1.1" 200 -
+2025-06-19 16:37:56,156 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:56,159 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:56] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:56,159 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:37:56,180 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:56] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:37:56,194 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:56] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:37:56,769 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:56] "GET / HTTP/1.1" 200 -
+2025-06-19 16:37:56,787 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:56,791 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:37:56,791 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:56] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:56,805 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:56] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:37:56,812 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:56] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:37:57,362 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:57] "GET / HTTP/1.1" 200 -
+2025-06-19 16:37:57,376 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:57,379 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:57] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:57,379 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:57] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:37:57,395 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:57] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:37:57,404 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:57] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:37:57,925 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:57] "GET / HTTP/1.1" 200 -
+2025-06-19 16:37:57,943 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:57,944 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:57] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:57,945 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:57] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:37:57,960 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:57] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:37:57,970 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:57] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:37:58,492 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:58] "GET / HTTP/1.1" 200 -
+2025-06-19 16:37:58,508 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:58,511 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:58] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:37:58,511 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:37:58,532 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:58] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:37:58,539 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:37:58] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:38:00,411 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:00] "GET / HTTP/1.1" 200 -
+2025-06-19 16:38:00,426 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:00,428 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:00] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:00,428 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:38:00,444 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:00] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:38:00,453 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:00] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:38:15,090 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:15] "GET / HTTP/1.1" 200 -
+2025-06-19 16:38:15,106 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:15] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:15,108 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:15,109 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:38:15,122 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:15] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:38:15,128 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:15] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:38:15,951 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:15] "GET / HTTP/1.1" 200 -
+2025-06-19 16:38:15,979 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:15,981 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:15] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:15,984 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:38:15,994 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:15] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:38:16,004 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:16] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:38:16,522 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:16] "GET / HTTP/1.1" 200 -
+2025-06-19 16:38:16,541 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:16] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:16,543 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:16] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:16,544 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:16] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:38:16,557 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:16] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:38:16,563 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:16] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:38:17,060 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:17] "GET / HTTP/1.1" 200 -
+2025-06-19 16:38:17,080 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:17,084 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:17] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:17,086 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:38:17,097 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:17] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:38:17,108 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:17] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:38:17,861 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:17] "GET / HTTP/1.1" 200 -
+2025-06-19 16:38:17,876 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:17,878 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:17] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:17,879 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:38:17,894 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:17] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:38:17,903 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:17] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-06-19 16:38:19,690 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:19] "GET / HTTP/1.1" 200 -
+2025-06-19 16:38:19,706 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:19,708 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:19] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-06-19 16:38:19,710 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-06-19 16:38:19,730 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:19] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-06-19 16:38:19,737 - werkzeug - INFO - 192.168.0.112 - - [19/Jun/2025 16:38:19] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-07-07 09:35:13,877 - root - INFO - 日志文件路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\output\logs\app.log
+2025-07-07 09:35:13,882 - root - INFO - ======= 测试日期范围检查功能 =======
+2025-07-07 09:35:13,887 - root - INFO - 日期 2023-10-15 在旺季内
+2025-07-07 09:35:13,888 - root - INFO - 日期 2023-11-01 在旺季内
+2025-07-07 09:35:13,888 - root - INFO - 日期 2023-12-31 在旺季内
+2025-07-07 09:35:13,888 - root - INFO - 日期 2024-01-14 在旺季内
+2025-07-07 09:35:13,889 - root - INFO - 日期 2023-10-14 不在旺季内
+2025-07-07 09:35:13,889 - root - INFO - 日期 2024-01-15 不在旺季内
+2025-07-07 09:35:13,890 - root - INFO - 日期 2023-02-01 不在旺季内
+2025-07-07 09:35:13,890 - root - INFO - 日期 2023-09-01 不在旺季内
+2025-07-07 09:35:13,890 - root - INFO - ======= 日期范围检查测试完成 =======
+2025-07-07 09:35:13,928 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:17084
+ * Running on http://192.168.0.106:17084
+2025-07-07 09:35:13,928 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 09:35:19,443 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:35:19] "GET / HTTP/1.1" 200 -
+2025-07-07 09:35:19,552 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:35:19] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-07-07 09:35:19,553 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:35:19] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-07-07 09:35:19,554 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:35:19] "GET /static/css/fontawesome.min.css HTTP/1.1" 200 -
+2025-07-07 09:35:19,673 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:35:19] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-07-07 09:35:19,794 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:35:19] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-07-07 09:35:20,233 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:35:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-07 09:39:50,719 - root - INFO - 日志文件路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\output\logs\app.log
+2025-07-07 09:39:50,732 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.106:5000
+2025-07-07 09:39:50,732 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 09:39:53,320 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:39:53] "GET / HTTP/1.1" 200 -
+2025-07-07 09:39:53,408 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:39:53] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-07-07 09:39:53,417 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:39:53] "GET /static/css/fontawesome.min.css HTTP/1.1" 200 -
+2025-07-07 09:39:53,417 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:39:53] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-07-07 09:39:53,584 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:39:53] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-07-07 09:39:53,752 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:39:53] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-07-07 09:39:54,119 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:39:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-07 09:48:48,720 - root - INFO - 日志文件路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\output\logs\app.log
+2025-07-07 09:48:48,735 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.106:5000
+2025-07-07 09:48:48,736 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 09:48:51,671 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:48:51] "GET / HTTP/1.1" 200 -
+2025-07-07 09:48:51,760 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:48:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-07-07 09:48:51,760 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:48:51] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-07-07 09:48:51,761 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:48:51] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-07-07 09:48:51,995 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:48:51] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-07-07 09:48:52,079 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:48:52] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-07-07 09:52:23,989 - root - INFO - ✅ 国家检查通过：所有订单都来自 英国
+2025-07-07 09:52:23,996 - root - INFO - ✅ 国家检查通过：所有订单都来自 英国
+2025-07-07 09:52:23,999 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:52:23] "POST /check_order_profit HTTP/1.1" 200 -
+2025-07-07 09:54:32,885 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:54:32] "POST /check_hual_msku HTTP/1.1" 200 -
+2025-07-07 09:58:05,906 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:58:05] "POST /check_product_info HTTP/1.1" 200 -
+2025-07-07 09:58:25,566 - root - INFO - 
+===== 开始处理文件上传 =====
+2025-07-07 09:58:25,567 - root - INFO - 请求方法: POST
+2025-07-07 09:58:25,570 - root - INFO - 表单数据: []
+2025-07-07 09:58:25,570 - root - INFO - 文件数据: ['order_profit', 'hual_msku', 'product_info', 'msku_profit']
+2025-07-07 09:58:25,571 - root - INFO - 订单利润报表文件名: 利润报表-订单-Transaction-800660566516727808.xlsx
+2025-07-07 09:58:25,571 - root - INFO - 保存订单利润报表: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250707_095825_order_profit_--Transaction-800660566516727808.xlsx
+2025-07-07 09:58:25,573 - root - INFO - 
+***** 强制检查订单利润报表日期范围 *****
+2025-07-07 09:58:25,573 - root - INFO - 📄 读取Excel文件，表头在第二行
+2025-07-07 09:58:25,851 - root - INFO - ✅ 成功读取订单数据，共792行
+2025-07-07 09:58:25,852 - root - INFO - 📊 数据列: ['店铺', '国家', '币种', '下单时间', '付款时间', '发货时间', '结算时间', '转账时间', '订单号', 'Settlement Id', '结算编号', 'MSKU', 'FNSKU', 'ASIN', '父asin', '品名', 'SKU', '账单类型', '费用类型', '订单类型', '描述', '结算状态', '转账状态', '数量', 'Listing负责人', '开发负责人', '销售额', '销售税', '买家运费', '买家运费税', '礼品包装', '礼品包装税', '积分', '促销折扣', '促销折扣税', '代扣代缴增值税', '低价值商品税', '市场预扣税', 'TCS_CGST', 'TCS_SGST', 'TCS_IGST', '平台费', 'FBA费', '其他交易费', '其他', '隐藏税', '亚马逊结算小计', '采购成本', '头程费用', '其他成本', '站外推广费', '结算订单毛利润', '结算订单毛利润率', '促销编码']
+2025-07-07 09:58:25,852 - root - INFO - ✅ 国家检查通过：所有订单都来自 英国
+2025-07-07 09:58:25,853 - root - INFO - 📅 结算时间样例: ['2025-06-30 23:57:40', '2025-06-30 23:45:09', '2025-06-30 23:35:40']
+2025-07-07 09:58:25,856 - root - INFO - ✅ 结算时间转换成功，数据类型: datetime64[ns]
+2025-07-07 09:58:25,858 - root - INFO - 📅 订单日期范围: 2025-06-01 至 2025-06-30
+2025-07-07 09:58:25,858 - root - INFO - 检查所有订单日期...
+2025-07-07 09:58:25,859 - root - INFO - ✓ 旺季区间内订单数: 0
+2025-07-07 09:58:25,860 - root - INFO - ✗ 非旺季区间内订单数: 792
+2025-07-07 09:58:25,860 - root - INFO - 总订单数: 792
+2025-07-07 09:58:25,860 - root - INFO - ✅ 配送周期检查通过！所有订单都在淡季配送费结算周期内
+2025-07-07 09:58:25,861 - root - INFO - 订单统计：淡季订单 792 条
+2025-07-07 09:58:25,861 - root - INFO - 
+----- 处理hual_msku文件 -----
+2025-07-07 09:58:25,861 - root - INFO - 文件名: Hual商品列表.xlsx
+2025-07-07 09:58:25,862 - root - INFO - 保存路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250707_095825_hual_msku_Hual.xlsx
+2025-07-07 09:58:25,864 - root - INFO - ✅ hual_msku文件保存成功
+2025-07-07 09:58:25,866 - root - INFO - 
+----- 处理product_info文件 -----
+2025-07-07 09:58:25,866 - root - INFO - 文件名: 产品资料SKC关系-VATIN-US.xlsx
+2025-07-07 09:58:25,866 - root - INFO - 保存路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250707_095825_product_info_SKC-VATIN-US.xlsx
+2025-07-07 09:58:25,867 - root - INFO - ✅ product_info文件保存成功
+2025-07-07 09:58:25,867 - root - INFO - 
+===== 所有必要文件上传完成 =====
+2025-07-07 09:58:25,869 - root - INFO - 
+===== 开始处理分析 =====
+2025-07-07 09:58:26,444 - root - INFO - 🔍 正在筛选正常订单用于配送费分析...
+2025-07-07 09:58:26,446 - root - INFO - 📊 数据筛选结果：
+2025-07-07 09:58:26,447 - root - INFO -    总订单数：792
+2025-07-07 09:58:26,447 - root - INFO -    正常订单数：792
+2025-07-07 09:58:26,448 - root - INFO -    异常订单数：0
+2025-07-07 09:58:26,448 - root - INFO -    异常订单占比：0.00%
+2025-07-07 09:58:26,448 - root - INFO - 正在关联产品资料表获取SKU和SKC信息...
+2025-07-07 09:58:26,448 - root - INFO - 产品资料表列: ['MSKU', 'FNSKU', '状态', '店铺', '国家', '变体属性', '品名', 'SKU', '商品标签', 'SKC', '品质']
+2025-07-07 09:58:26,448 - root - INFO - 产品资料表行数: 2099
+2025-07-07 09:58:26,457 - root - INFO - 关联后数据行数: 792
+2025-07-07 09:58:26,458 - root - INFO - 关联后数据列: ['店铺', '国家', '币种', '下单时间', '付款时间', '发货时间', '结算时间', '转账时间', '订单号', 'Settlement Id', '结算编号', 'MSKU', 'FNSKU', 'ASIN', '父asin', '品名', '订单MSKU', '账单类型', '费用类型', '订单类型', '描述', '结算状态', '转账状态', '数量', 'Listing负责人', '开发负责人', '销售额', '销售税', '买家运费', '买家运费税', '礼品包装', '礼品包装税', '积分', '促销折扣', '促销折扣税', '代扣代缴增值税', '低价值商品税', '市场预扣税', 'TCS_CGST', 'TCS_SGST', 'TCS_IGST', '平台费', 'FBA费', '其他交易费', '其他', '隐藏税', '亚马逊结算小计', '采购成本', '头程费用', '其他成本', '站外推广费', '结算订单毛利润', '结算订单毛利润率', '促销编码', '实际配送费', 'SKU', 'SKC']
+2025-07-07 09:58:26,460 - root - INFO - SKU列: 有效数据483行, 空值309行
+2025-07-07 09:58:26,461 - root - INFO - SKC列: 有效数据483行, 空值309行
+2025-07-07 09:58:26,462 - root - INFO - 找到店铺列: 店铺
+2025-07-07 09:58:26,462 - root - INFO - 成功关联产品信息，关联后数据行数: 792
+2025-07-07 09:58:26,462 - root - INFO - 正在生成MSKU维度汇总（包含店铺信息）...
+2025-07-07 09:58:26,475 - root - INFO - MSKU维度汇总完成，共118条记录
+2025-07-07 09:58:26,476 - root - INFO - 正在进行SKC配送费异常检查...
+2025-07-07 09:58:26,573 - root - INFO - SKC配送费异常检查完成，发现67个异常记录
+2025-07-07 09:58:27,945 - root - INFO - ✅ 分析成功完成
+2025-07-07 09:58:27,961 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:58:27] "POST /upload HTTP/1.1" 200 -
+2025-07-07 09:58:28,043 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:58:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-07-07 09:58:28,045 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:58:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-07-07 09:58:28,046 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:58:28] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-07-07 09:58:28,438 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:58:28] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-07-07 09:58:29,274 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:58:29] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-07-07 09:58:29,998 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:58:29] "HEAD /download/异常订单数据_20250707_095826.xlsx HTTP/1.1" 200 -
+2025-07-07 09:58:30,047 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:58:30] "HEAD /download/配送费分析_20250707_095826.xlsx HTTP/1.1" 200 -
+2025-07-07 09:58:30,148 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:58:30] "HEAD /download/异常订单数据_20250707_095826.xlsx HTTP/1.1" 200 -
+2025-07-07 09:58:30,346 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:58:30] "HEAD /download/配送费分析_20250707_095826.xlsx HTTP/1.1" 200 -
+2025-07-07 09:59:37,352 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:59:37] "GET /download/配送费分析_20250707_095826.xlsx HTTP/1.1" 200 -
+2025-07-07 09:59:37,448 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:59:37] "[35m[1mGET /download/配送费分析_20250707_095826.xlsx HTTP/1.1[0m" 206 -
+2025-07-07 09:59:37,455 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:59:37] "[35m[1mGET /download/配送费分析_20250707_095826.xlsx HTTP/1.1[0m" 206 -
+2025-07-07 10:39:50,418 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:39:50] "GET / HTTP/1.1" 200 -
+2025-07-07 10:39:50,432 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:39:50] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-07-07 10:39:50,434 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:39:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-07-07 10:39:50,435 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:39:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-07-07 10:39:50,679 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:39:50] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-07-07 10:39:50,776 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:39:50] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-07-07 10:39:58,396 - root - INFO - ✅ 国家检查通过：所有订单都来自 英国
+2025-07-07 10:39:58,399 - root - INFO - ✅ 国家检查通过：所有订单都来自 英国
+2025-07-07 10:39:58,401 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:39:58] "POST /check_order_profit HTTP/1.1" 200 -
+2025-07-07 10:40:02,710 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:40:02] "POST /check_hual_msku HTTP/1.1" 200 -
+2025-07-07 10:40:06,946 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:40:06] "POST /check_product_info HTTP/1.1" 200 -
+2025-07-07 10:41:50,522 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:41:50] "POST /check_product_info HTTP/1.1" 200 -
+2025-07-07 10:41:52,199 - root - INFO - 
+===== 开始处理文件上传 =====
+2025-07-07 10:41:52,199 - root - INFO - 请求方法: POST
+2025-07-07 10:41:52,205 - root - INFO - 表单数据: []
+2025-07-07 10:41:52,206 - root - INFO - 文件数据: ['order_profit', 'hual_msku', 'product_info', 'msku_profit']
+2025-07-07 10:41:52,206 - root - INFO - 订单利润报表文件名: 利润报表-订单-Transaction-800660566516727808.xlsx
+2025-07-07 10:41:52,207 - root - INFO - 保存订单利润报表: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250707_104152_order_profit_--Transaction-800660566516727808.xlsx
+2025-07-07 10:41:52,208 - root - INFO - 
+***** 强制检查订单利润报表日期范围 *****
+2025-07-07 10:41:52,208 - root - INFO - 📄 读取Excel文件，表头在第二行
+2025-07-07 10:41:52,418 - root - INFO - ✅ 成功读取订单数据，共792行
+2025-07-07 10:41:52,418 - root - INFO - 📊 数据列: ['店铺', '国家', '币种', '下单时间', '付款时间', '发货时间', '结算时间', '转账时间', '订单号', 'Settlement Id', '结算编号', 'MSKU', 'FNSKU', 'ASIN', '父asin', '品名', 'SKU', '账单类型', '费用类型', '订单类型', '描述', '结算状态', '转账状态', '数量', 'Listing负责人', '开发负责人', '销售额', '销售税', '买家运费', '买家运费税', '礼品包装', '礼品包装税', '积分', '促销折扣', '促销折扣税', '代扣代缴增值税', '低价值商品税', '市场预扣税', 'TCS_CGST', 'TCS_SGST', 'TCS_IGST', '平台费', 'FBA费', '其他交易费', '其他', '隐藏税', '亚马逊结算小计', '采购成本', '头程费用', '其他成本', '站外推广费', '结算订单毛利润', '结算订单毛利润率', '促销编码']
+2025-07-07 10:41:52,419 - root - INFO - ✅ 国家检查通过：所有订单都来自 英国
+2025-07-07 10:41:52,420 - root - INFO - 📅 结算时间样例: ['2025-06-30 23:57:40', '2025-06-30 23:45:09', '2025-06-30 23:35:40']
+2025-07-07 10:41:52,422 - root - INFO - ✅ 结算时间转换成功，数据类型: datetime64[ns]
+2025-07-07 10:41:52,423 - root - INFO - 📅 订单日期范围: 2025-06-01 至 2025-06-30
+2025-07-07 10:41:52,424 - root - INFO - 检查所有订单日期...
+2025-07-07 10:41:52,425 - root - INFO - ✓ 旺季区间内订单数: 0
+2025-07-07 10:41:52,425 - root - INFO - ✗ 非旺季区间内订单数: 792
+2025-07-07 10:41:52,426 - root - INFO - 总订单数: 792
+2025-07-07 10:41:52,426 - root - INFO - ✅ 配送周期检查通过！所有订单都在淡季配送费结算周期内
+2025-07-07 10:41:52,426 - root - INFO - 订单统计：淡季订单 792 条
+2025-07-07 10:41:52,426 - root - INFO - 
+----- 处理hual_msku文件 -----
+2025-07-07 10:41:52,427 - root - INFO - 文件名: Hual商品列表.xlsx
+2025-07-07 10:41:52,427 - root - INFO - 保存路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250707_104152_hual_msku_Hual.xlsx
+2025-07-07 10:41:52,428 - root - INFO - ✅ hual_msku文件保存成功
+2025-07-07 10:41:52,428 - root - INFO - 
+----- 处理product_info文件 -----
+2025-07-07 10:41:52,429 - root - INFO - 文件名: 产品资料SKC关系-VATIN-UK.xlsx
+2025-07-07 10:41:52,429 - root - INFO - 保存路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250707_104152_product_info_SKC-VATIN-UK.xlsx
+2025-07-07 10:41:52,430 - root - INFO - ✅ product_info文件保存成功
+2025-07-07 10:41:52,430 - root - INFO - 
+===== 所有必要文件上传完成 =====
+2025-07-07 10:41:52,430 - root - INFO - 
+===== 开始处理分析 =====
+2025-07-07 10:41:52,992 - root - INFO - 🔍 正在筛选正常订单用于配送费分析...
+2025-07-07 10:41:52,993 - root - INFO - 📊 数据筛选结果：
+2025-07-07 10:41:52,993 - root - INFO -    总订单数：792
+2025-07-07 10:41:52,993 - root - INFO -    正常订单数：792
+2025-07-07 10:41:52,993 - root - INFO -    异常订单数：0
+2025-07-07 10:41:52,995 - root - INFO -    异常订单占比：0.00%
+2025-07-07 10:41:52,995 - root - INFO - 正在关联产品资料表获取SKU和SKC信息...
+2025-07-07 10:41:52,995 - root - INFO - 产品资料表列: ['MSKU', 'FNSKU', 'SKU', 'SKC', 'ASIN', '品质', '状态', '父ASIN', '标题', '店铺', '国家', '配送方式', '亚马逊品牌', '变体属性', '品名', '分类', '本地品牌', '商品标签', '创建时间', '开售时间']
+2025-07-07 10:41:52,995 - root - INFO - 产品资料表行数: 2007
+2025-07-07 10:41:52,998 - root - INFO - 关联后数据行数: 792
+2025-07-07 10:41:52,998 - root - INFO - 关联后数据列: ['店铺', '国家', '币种', '下单时间', '付款时间', '发货时间', '结算时间', '转账时间', '订单号', 'Settlement Id', '结算编号', 'MSKU', 'FNSKU', 'ASIN', '父asin', '品名', '订单MSKU', '账单类型', '费用类型', '订单类型', '描述', '结算状态', '转账状态', '数量', 'Listing负责人', '开发负责人', '销售额', '销售税', '买家运费', '买家运费税', '礼品包装', '礼品包装税', '积分', '促销折扣', '促销折扣税', '代扣代缴增值税', '低价值商品税', '市场预扣税', 'TCS_CGST', 'TCS_SGST', 'TCS_IGST', '平台费', 'FBA费', '其他交易费', '其他', '隐藏税', '亚马逊结算小计', '采购成本', '头程费用', '其他成本', '站外推广费', '结算订单毛利润', '结算订单毛利润率', '促销编码', '实际配送费', 'SKU', 'SKC']
+2025-07-07 10:41:52,998 - root - INFO - SKU列: 有效数据576行, 空值216行
+2025-07-07 10:41:52,999 - root - INFO - SKC列: 有效数据576行, 空值216行
+2025-07-07 10:41:53,000 - root - INFO - 找到店铺列: 店铺
+2025-07-07 10:41:53,000 - root - INFO - 成功关联产品信息，关联后数据行数: 792
+2025-07-07 10:41:53,001 - root - INFO - 正在生成MSKU维度汇总（包含店铺信息）...
+2025-07-07 10:41:53,003 - root - INFO - MSKU维度汇总完成，共118条记录
+2025-07-07 10:41:53,003 - root - INFO - 正在进行SKC配送费异常检查...
+2025-07-07 10:41:53,063 - root - INFO - SKC配送费异常检查完成，发现68个异常记录
+2025-07-07 10:41:54,099 - root - INFO - ✅ 分析成功完成
+2025-07-07 10:41:54,100 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:41:54] "POST /upload HTTP/1.1" 200 -
+2025-07-07 10:41:54,142 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:41:54] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-07-07 10:41:54,143 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:41:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-07-07 10:41:54,143 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:41:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-07-07 10:41:54,219 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:41:54] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-07-07 10:41:54,236 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:41:54] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-07-07 10:41:54,589 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:41:54] "HEAD /download/异常订单数据_20250707_104152.xlsx HTTP/1.1" 200 -
+2025-07-07 10:41:54,670 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:41:54] "HEAD /download/配送费分析_20250707_104152.xlsx HTTP/1.1" 200 -
+2025-07-07 10:41:55,303 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:41:55] "HEAD /download/异常订单数据_20250707_104152.xlsx HTTP/1.1" 200 -
+2025-07-07 10:41:56,861 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:41:56] "GET /download/配送费分析_20250707_104152.xlsx HTTP/1.1" 200 -
+2025-07-07 10:41:56,933 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:41:56] "[35m[1mGET /download/配送费分析_20250707_104152.xlsx HTTP/1.1[0m" 206 -
+2025-07-07 10:41:56,936 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:41:56] "[35m[1mGET /download/配送费分析_20250707_104152.xlsx HTTP/1.1[0m" 206 -
+2025-07-07 13:53:40,436 - root - INFO - 日志文件路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\output\logs\app.log
+2025-07-07 13:53:40,450 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.106:5000
+2025-07-07 13:53:40,450 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 13:53:43,350 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:53:43] "GET / HTTP/1.1" 200 -
+2025-07-07 13:53:43,445 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:53:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-07-07 13:53:43,447 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:53:43] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-07-07 13:53:43,449 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:53:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-07-07 13:53:43,671 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:53:43] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-07-07 13:53:43,814 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:53:43] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-07-07 13:55:04,723 - root - INFO - 日志文件路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\output\logs\app.log
+2025-07-07 13:55:04,736 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.106:5000
+2025-07-07 13:55:04,736 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 13:55:06,792 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:06] "GET / HTTP/1.1" 200 -
+2025-07-07 13:55:06,876 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-07-07 13:55:06,881 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:06] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-07-07 13:55:06,881 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-07-07 13:55:07,108 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:07] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-07-07 13:55:07,214 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:07] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-07-07 13:55:16,409 - root - INFO - ✅ 国家检查通过：所有订单都来自 美国
+2025-07-07 13:55:16,420 - root - INFO - ✅ 国家检查通过：所有订单都来自 美国
+2025-07-07 13:55:16,423 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:16] "POST /check_order_profit HTTP/1.1" 200 -
+2025-07-07 13:55:28,100 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:28] "POST /check_hual_msku HTTP/1.1" 200 -
+2025-07-07 13:55:32,525 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:32] "POST /check_product_info HTTP/1.1" 200 -
+2025-07-07 14:10:10,224 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:10] "POST /check_order_profit HTTP/1.1" 200 -
+2025-07-07 14:10:18,646 - root - INFO - ✅ 国家检查通过：所有订单都来自 美国
+2025-07-07 14:10:18,651 - root - INFO - ✅ 国家检查通过：所有订单都来自 美国
+2025-07-07 14:10:18,655 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:18] "POST /check_order_profit HTTP/1.1" 200 -
+2025-07-07 14:10:22,644 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:22] "POST /check_hual_msku HTTP/1.1" 200 -
+2025-07-07 14:10:27,146 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:27] "POST /check_product_info HTTP/1.1" 200 -
+2025-07-07 14:10:33,009 - root - INFO - ✅ MSKU报表国家检查通过：所有数据都来自 美国
+2025-07-07 14:10:33,920 - root - INFO - ✅ MSKU报表配送周期检查通过：所有日期范围都在淡季配送费结算周期内
+2025-07-07 14:10:33,921 - root - WARNING - ⚠️ MSKU报表未找到'费用类型'列，跳过费用类型检查
+2025-07-07 14:10:34,027 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:34] "POST /check_msku_profit HTTP/1.1" 200 -
+2025-07-07 14:10:34,983 - root - INFO - 
+===== 开始处理文件上传 =====
+2025-07-07 14:10:34,983 - root - INFO - 请求方法: POST
+2025-07-07 14:10:34,999 - root - INFO - 表单数据: []
+2025-07-07 14:10:35,000 - root - INFO - 文件数据: ['order_profit', 'hual_msku', 'product_info', 'msku_profit']
+2025-07-07 14:10:35,001 - root - INFO - 订单利润报表文件名: 利润报表-订单-Transaction-800724798415532032.xlsx
+2025-07-07 14:10:35,002 - root - INFO - 保存订单利润报表: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250707_141035_order_profit_--Transaction-800724798415532032.xlsx
+2025-07-07 14:10:35,003 - root - INFO - 
+***** 强制检查订单利润报表日期范围 *****
+2025-07-07 14:10:35,004 - root - INFO - 📄 读取Excel文件，表头在第二行
+2025-07-07 14:10:36,093 - root - INFO - ✅ 成功读取订单数据，共3467行
+2025-07-07 14:10:36,093 - root - INFO - 📊 数据列: ['店铺', '国家', '币种', '下单时间', '付款时间', '发货时间', '结算时间', '转账时间', '订单号', 'Settlement Id', '结算编号', 'MSKU', 'FNSKU', 'ASIN', '父asin', '品名', 'SKU', '账单类型', '费用类型', '订单类型', '描述', '结算状态', '转账状态', '数量', 'Listing负责人', '开发负责人', '销售额', '销售税', '买家运费', '买家运费税', '礼品包装', '礼品包装税', '积分', '促销折扣', '促销折扣税', '代扣代缴增值税', '低价值商品税', '市场预扣税', 'TCS_CGST', 'TCS_SGST', 'TCS_IGST', '平台费', 'FBA费', '其他交易费', '其他', '隐藏税', '亚马逊结算小计', '采购成本', '头程费用', '其他成本', '站外推广费', '结算订单毛利润', '结算订单毛利润率', '促销编码']
+2025-07-07 14:10:36,095 - root - INFO - ✅ 国家检查通过：所有订单都来自 美国
+2025-07-07 14:10:36,095 - root - INFO - 📅 结算时间样例: ['2025-06-30 23:51:48', '2025-06-30 23:47:11', '2025-06-30 23:43:51']
+2025-07-07 14:10:36,099 - root - INFO - ✅ 结算时间转换成功，数据类型: datetime64[ns]
+2025-07-07 14:10:36,102 - root - INFO - 📅 订单日期范围: 2025-06-01 至 2025-06-30
+2025-07-07 14:10:36,102 - root - INFO - 检查所有订单日期...
+2025-07-07 14:10:36,113 - root - INFO - ✓ 旺季区间内订单数: 0
+2025-07-07 14:10:36,113 - root - INFO - ✗ 非旺季区间内订单数: 3467
+2025-07-07 14:10:36,114 - root - INFO - 总订单数: 3467
+2025-07-07 14:10:36,114 - root - INFO - ✅ 配送周期检查通过！所有订单都在淡季配送费结算周期内
+2025-07-07 14:10:36,114 - root - INFO - 订单统计：淡季订单 3467 条
+2025-07-07 14:10:36,114 - root - INFO - 
+----- 处理hual_msku文件 -----
+2025-07-07 14:10:36,115 - root - INFO - 文件名: Hual商品列表.xlsx
+2025-07-07 14:10:36,115 - root - INFO - 保存路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250707_141036_hual_msku_Hual.xlsx
+2025-07-07 14:10:36,117 - root - INFO - ✅ hual_msku文件保存成功
+2025-07-07 14:10:36,117 - root - INFO - 
+----- 处理product_info文件 -----
+2025-07-07 14:10:36,117 - root - INFO - 文件名: 产品资料SKC关系-VATIN-US.xlsx
+2025-07-07 14:10:36,118 - root - INFO - 保存路径: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250707_141036_product_info_SKC-VATIN-US.xlsx
+2025-07-07 14:10:36,119 - root - INFO - ✅ product_info文件保存成功
+2025-07-07 14:10:36,119 - root - INFO - 
+===== 所有必要文件上传完成 =====
+2025-07-07 14:10:36,123 - root - INFO - ✅ 可选文件 msku_profit 上传成功: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250707_141036_msku_profit_-MSKU-800726135965220864.xlsx
+2025-07-07 14:10:36,123 - root - INFO - 
+===== 开始处理分析 =====
+2025-07-07 14:10:37,616 - root - INFO - 🔍 正在筛选正常订单用于配送费分析...
+2025-07-07 14:10:37,621 - root - INFO - 📊 数据筛选结果：
+2025-07-07 14:10:37,621 - root - INFO -    总订单数：3467
+2025-07-07 14:10:37,622 - root - INFO -    正常订单数：3463
+2025-07-07 14:10:37,622 - root - INFO -    异常订单数：4
+2025-07-07 14:10:37,622 - root - INFO -    异常订单占比：0.12%
+2025-07-07 14:10:37,622 - root - INFO - 正在关联产品资料表获取SKU和SKC信息...
+2025-07-07 14:10:37,623 - root - INFO - 产品资料表列: ['MSKU', 'FNSKU', '状态', '店铺', '国家', '变体属性', '品名', 'SKU', '商品标签', 'SKC', '品质']
+2025-07-07 14:10:37,623 - root - INFO - 产品资料表行数: 2099
+2025-07-07 14:10:37,634 - root - INFO - 关联后数据行数: 3463
+2025-07-07 14:10:37,634 - root - INFO - 关联后数据列: ['店铺', '国家', '币种', '下单时间', '付款时间', '发货时间', '结算时间', '转账时间', '订单号', 'Settlement Id', '结算编号', 'MSKU', 'FNSKU', 'ASIN', '父asin', '品名', '订单MSKU', '账单类型', '费用类型', '订单类型', '描述', '结算状态', '转账状态', '数量', 'Listing负责人', '开发负责人', '销售额', '销售税', '买家运费', '买家运费税', '礼品包装', '礼品包装税', '积分', '促销折扣', '促销折扣税', '代扣代缴增值税', '低价值商品税', '市场预扣税', 'TCS_CGST', 'TCS_SGST', 'TCS_IGST', '平台费', 'FBA费', '其他交易费', '其他', '隐藏税', '亚马逊结算小计', '采购成本', '头程费用', '其他成本', '站外推广费', '结算订单毛利润', '结算订单毛利润率', '促销编码', '实际配送费', 'SKU', 'SKC']
+2025-07-07 14:10:37,635 - root - INFO - SKU列: 有效数据2552行, 空值911行
+2025-07-07 14:10:37,636 - root - INFO - SKC列: 有效数据2552行, 空值911行
+2025-07-07 14:10:37,637 - root - INFO - 找到店铺列: 店铺
+2025-07-07 14:10:37,637 - root - INFO - 成功关联产品信息，关联后数据行数: 3463
+2025-07-07 14:10:37,639 - root - INFO - 正在生成MSKU维度汇总（包含店铺信息）...
+2025-07-07 14:10:37,650 - root - INFO - MSKU维度汇总完成，共181条记录
+2025-07-07 14:10:37,650 - root - INFO - 正在进行SKC配送费异常检查...
+2025-07-07 14:10:37,749 - root - INFO - SKC配送费异常检查完成，发现30个异常记录
+2025-07-07 14:10:43,107 - root - INFO - 🔧 开始MSKU维度利润报表校正...
+2025-07-07 14:10:43,107 - root - INFO - 📄 读取MSKU维度利润报表: d:\华为家庭存储\Pythonproject\MSKU表现分析器\data\uploads\20250707_141036_msku_profit_-MSKU-800726135965220864.xlsx
+2025-07-07 14:10:44,937 - root - INFO - ✅ 成功读取MSKU维度利润报表，共1713行
+2025-07-07 14:10:44,938 - root - INFO - 📊 数据列: ['日期', '型号', 'MSKU', 'ASIN', '父ASIN', '店铺', '国家', '品名', 'SKU', '标题', 'Listing负责人', '开发负责人', '一级分类', '二级分类', '三级分类', '品牌', '币种', 'Listing标签', 'FBA销量', 'FBM销量', 'FBM补（换）货量', 'FBM补（换）货退回量', 'FBA补（换）货量', 'FBA补（换）货退回量', '多渠道销量', 'SP广告销售额', 'SD广告销售额', 'SB广告销售额', 'SBV广告销售额', 'SP广告销量', 'SD广告销量', 'SB广告销量', 'SBV广告销量', 'FBA销售额', 'FBM销售额', '买家运费', '促销折扣', 'FBA库存赔偿', '赔偿量', 'COD', '退款量', '退款率', '退货量（可售）', '退货量（不可售）', '退货率', '包装收入', '买家交易保障索赔额', '积分抵减收入', '清算收入', '亚马逊运费赔偿', 'Safe-T索赔', 'Netco交易', '赔偿收入', '追索收入', '其他收入-其他', '清算调整', '混合VAT收入', 'FBM销售退款额', 'FBA销售退款额', '买家运费退款额', '买家包装退款额', '促销折扣退款额', '买家拒付', '积分抵减退回', '平台费退款项', '发货费退款项', '其他订单费退款项', '运输标签费退款', '交易费用退款额', '积分费用', '广告退款额', '平台费', 'FBA发货费(FBA)', '亚马逊物流客户退货费', 'FBA发货费(多渠道)', '其他订单费用', 'FBA国际物流货运费', '调整费用', 'SP广告', 'SD广告', 'SB广告', 'SBV广告', '差异分摊', '订阅费', '秒杀费', '优惠券', '早期评论人计划', 'VINE', '其他仓储费', '月仓储费', '月仓储费差异', '月仓储费本月计提', '月仓储费上月冲销', '长期仓储费', '长期仓储费差异', '长期仓储费本月计提', '长期仓储费上月冲销', '库存续订费用', 'FBA销毁费', '销毁量', 'FBA移除费', '移除量', '入仓手续费', '标签费', '塑料包装费', 'FBA卖家退回费', 'FBA仓储费-入库缺陷费', '库存调整费', '合作承运费', '入库配置费（原合仓费）', '超量仓储费', '泡沫包装费', '胶带费', 'AWD处理费', 'AWD运输费', 'AWD仓储费', '卫星仓仓储费', '购买配送费（原运输标签费）', '承运人装运标签调整费', '其他服务费', '人工处理费用', '清算费', 'MFNPostageFee', '站外推广费', '财务费用', '其他费用-发AWD仓库费用', '管理费用', '销售费用（线下）', 'TCS_IGST', 'TCS_SGST', 'TCS_CGST', '混合VAT', 'VAT/GST', '商品税调整', '礼品包装税', '买家运费税', '促销折扣税', '商品价格税', 'TCS_IGST.1', 'TCS_SGST.1', 'TCS_CGST.1', 'VAT/GST.1', '礼品包装税.1', '买家运费税.1', '促销折扣税.1', '商品价格税.1', '市场税', '市场税退款额', '混合网络费', '采购成本', '采购均价', '采购占比', '头程成本', '头程均价', '头程占比', '其他成本', '其他均价', '其他占比', '合计成本', '合计成本占比', '毛利润', '毛利率', 'ROI', 'FBA盘点入库数量', 'FBA无源单退货数量', 'FBA有源单退货数量', 'FBA移除数量', 'FBA盘点出库数量', 'FBA补发货销售数量', 'FBA多渠道销售订单数量', 'FBA销售订单数量', '自发货亚马逊销售出库数量', '自发货多平台销售出库数量', 'FBA预估销售成本数量', 'FBA盘点入库采购成本', 'FBA无源单退货采购成本', 'FBA有源单退货采购成本', 'FBA移除采购成本', 'FBA盘点出库采购成本', 'FBA补发货销售采购成本', 'FBA多渠道销售订单采购成本', 'FBA销售订单采购成本', '自发货亚马逊销售出库采购成本', '自发货多平台销售出库采购成本', 'FBA预估销售成本采购成本', 'FBA盘点入库物流成本', 'FBA无源单退货物流成本', 'FBA有源单退货物流成本', 'FBA移除物流成本', 'FBA盘点出库物流成本', 'FBA补发货销售物流成本', 'FBA多渠道销售订单物流成本', 'FBA销售订单物流成本', '自发货亚马逊销售出库物流成本', '自发货多平台销售出库物流成本', 'FBA预估销售成本物流成本', 'FBA盘点入库其他成本', 'FBA无源单退货其他成本', 'FBA有源单退货其他成本', 'FBA移除其他成本', 'FBA盘点出库其他成本', 'FBA补发货销售其他成本', 'FBA多渠道销售订单其他成本', 'FBA销售订单其他成本', '自发货亚马逊销售出库其他成本', '自发货多平台销售出库其他成本', 'FBA预估销售成本其他成本']
+2025-07-07 14:10:44,939 - root - INFO - 📊 计算异常订单费用汇总...
+2025-07-07 14:10:44,941 - root - INFO - ✅ 异常订单费用汇总完成，涉及4个MSKU
+2025-07-07 14:10:44,942 - root - INFO - 📊 创建SKC最低配送费字典...
+2025-07-07 14:10:44,961 - root - INFO - ✅ SKC最低配送费字典创建完成，包含51个SKC
+2025-07-07 14:10:44,962 - root - INFO - 📊 创建SKC最低头程均价字典...
+2025-07-07 14:10:44,973 - root - INFO - ✅ SKC最低头程均价字典创建完成，包含51个SKC
+2025-07-07 14:10:44,976 - root - INFO - 🔧 执行异常订单费用校正...
+2025-07-07 14:10:44,983 - root - INFO - ✅ 异常订单费用校正完成，校正了4个MSKU
+2025-07-07 14:10:44,983 - root - INFO - 🔧 执行FBA配送费理想校正...
+2025-07-07 14:10:45,068 - root - INFO - ✅ FBA配送费理想校正完成，校正了327个MSKU
+2025-07-07 14:10:45,069 - root - INFO - 🔧 执行头程成本理想校正...
+2025-07-07 14:10:45,160 - root - INFO - ✅ 头程成本理想校正完成，校正了736个MSKU
+2025-07-07 14:10:54,882 - root - INFO - ✅ 分析成功完成
+2025-07-07 14:10:54,898 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:54] "POST /upload HTTP/1.1" 200 -
+2025-07-07 14:10:54,940 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-07-07 14:10:54,941 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:54] "[36mGET /static/css/fontawesome.min.css HTTP/1.1[0m" 304 -
+2025-07-07 14:10:54,941 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-07-07 14:10:55,580 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:55] "[33mGET /static/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 404 -
+2025-07-07 14:10:55,629 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:55] "[33mGET /static/webfonts/fa-solid-900.ttf HTTP/1.1[0m" 404 -
+2025-07-07 14:10:56,002 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:56] "HEAD /download/异常订单数据_20250707_141037.xlsx HTTP/1.1" 200 -
+2025-07-07 14:10:56,056 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:56] "HEAD /download/配送费分析_20250707_141037.xlsx HTTP/1.1" 200 -
+2025-07-07 14:10:56,089 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:10:56] "HEAD /download/MSKU利润报表校正结果_20250707_141037.xlsx HTTP/1.1" 200 -
+2025-07-07 14:11:35,842 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:11:35] "GET /download/MSKU利润报表校正结果_20250707_141037.xlsx HTTP/1.1" 200 -
+2025-07-07 14:11:35,965 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:11:35] "[35m[1mGET /download/MSKU利润报表校正结果_20250707_141037.xlsx HTTP/1.1[0m" 206 -
+2025-07-07 14:11:35,973 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:11:35] "[35m[1mGET /download/MSKU利润报表校正结果_20250707_141037.xlsx HTTP/1.1[0m" 206 -

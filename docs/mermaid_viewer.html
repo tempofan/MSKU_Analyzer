@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSKU流程图查看器 📊</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .input-area {
+            margin-bottom: 30px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Consolas', monospace;
+            font-size: 14px;
+            resize: vertical;
+        }
+        .buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        button {
+            background: #007acc;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #005999;
+        }
+        #diagram {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background: white;
+            text-align: center;
+            min-height: 200px;
+        }
+        .preset-buttons {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .preset-btn {
+            background: #28a745;
+            margin: 5px;
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+        .preset-btn:hover {
+            background: #218838;
+        }
+        .tip {
+            background: #e7f3ff;
+            border-left: 4px solid #007acc;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 MSKU流程图查看器</h1>
+        
+        <div class="tip">
+            <strong>💡 使用说明：</strong><br/>
+            1. 点击下面的预设按钮加载流程图模板<br/>
+            2. 或者直接在文本框中粘贴Mermaid代码<br/>
+            3. 点击"生成流程图"按钮查看效果<br/>
+            4. 右键点击流程图可以保存为图片
+        </div>
+
+        <div class="preset-buttons">
+            <button class="preset-btn" onclick="loadMainFlow()">📊 主程序流程图</button>
+            <button class="preset-btn" onclick="loadDecisionTree()">🌳 配送费决策树</button>
+            <button class="preset-btn" onclick="loadCorrection()">🔧 三重校正机制</button>
+        </div>
+
+        <div class="input-area">
+            <textarea id="mermaidCode" placeholder="在这里粘贴或输入Mermaid代码...">
+flowchart TD
+    Start([🚀 开始]) --> Process[📊 处理数据]
+    Process --> End([✅ 结束])
+            </textarea>
+        </div>
+
+        <div class="buttons">
+            <button onclick="generateDiagram()">🎨 生成流程图</button>
+            <button onclick="clearCode()">🗑️ 清空代码</button>
+            <button onclick="exportSVG()">📁 导出SVG</button>
+        </div>
+
+        <div id="diagram"></div>
+    </div>
+
+    <script>
+        // 初始化Mermaid
+        mermaid.initialize({ 
+            startOnLoad: false,
+            theme: 'default',
+            themeVariables: {
+                fontSize: '16px'
+            }
+        });
+
+        // 生成流程图
+        function generateDiagram() {
+            const code = document.getElementById('mermaidCode').value;
+            const diagramDiv = document.getElementById('diagram');
+            
+            if (!code.trim()) {
+                diagramDiv.innerHTML = '<p style="color: #999;">请输入Mermaid代码</p>';
+                return;
+            }
+
+            try {
+                // 清空之前的内容
+                diagramDiv.innerHTML = '';
+                
+                // 生成新的流程图
+                mermaid.render('generated-diagram', code).then(result => {
+                    diagramDiv.innerHTML = result.svg;
+                }).catch(error => {
+                    diagramDiv.innerHTML = `<p style="color: red;">代码格式错误: ${error.message}</p>`;
+                });
+            } catch (error) {
+                diagramDiv.innerHTML = `<p style="color: red;">生成失败: ${error.message}</p>`;
+            }
+        }
+
+        // 清空代码
+        function clearCode() {
+            document.getElementById('mermaidCode').value = '';
+            document.getElementById('diagram').innerHTML = '';
+        }
+
+        // 导出SVG
+        function exportSVG() {
+            const svg = document.querySelector('#diagram svg');
+            if (!svg) {
+                alert('请先生成流程图');
+                return;
+            }
+
+            const svgData = new XMLSerializer().serializeToString(svg);
+            const blob = new Blob([svgData], {type: 'image/svg+xml'});
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'msku_flowchart.svg';
+            a.click();
+            
+            URL.revokeObjectURL(url);
+        }
+
+        // 预设流程图模板
+        function loadMainFlow() {
+            document.getElementById('mermaidCode').value = `flowchart TD
+    Start([🚀 程序启动]) --> InputCheck{📁 检查输入文件}
+    
+    InputCheck -->|缺少文件| Error1[❌ 提示文件缺失]
+    InputCheck -->|文件完整| ValidateFiles[🔍 验证文件格式]
+    
+    ValidateFiles --> CheckOrder[📊 验证订单利润报表]
+    CheckOrder -->|格式错误| Error2[❌ 订单报表格式错误]
+    CheckOrder -->|✅ 通过| CheckHual[📋 验证Hual MSKU列表]
+    
+    CheckHual -->|格式错误| Error3[❌ Hual列表格式错误]
+    CheckHual -->|✅ 通过| CheckProduct[📦 验证产品资料表]
+    
+    CheckProduct -->|格式错误| Error4[❌ 产品资料表格式错误]
+    CheckProduct -->|✅ 通过| ReadData[📖 读取数据文件]
+    
+    ReadData --> ProcessOrder[📊 处理订单利润报表]
+    ProcessOrder --> DataClean[🧹 数据清洗和预处理]
+    DataClean --> IdentifySpecial[🎯 识别特殊订单类型]
+    
+    IdentifySpecial --> VineOrder[🍇 VINE订单]
+    IdentifySpecial --> ExchangeOrder[🔄 换货订单]
+    IdentifySpecial --> NewProductOrder[🆕 新品入仓优惠订单]
+    IdentifySpecial --> HualOrder[🏷️ Hual订单]
+    IdentifySpecial --> SecondhandOrder[♻️ 二手商品订单]
+    
+    VineOrder --> AbnormalSummary[📊 异常订单汇总]
+    ExchangeOrder --> AbnormalSummary
+    NewProductOrder --> AbnormalSummary
+    HualOrder --> AbnormalSummary
+    SecondhandOrder --> AbnormalSummary
+    
+    IdentifySpecial --> NormalOrder[✅ 正常订单筛选]
+    NormalOrder --> CalcShipping[💰 计算实际配送费]
+    CalcShipping --> GenerateReport[📋 生成分析报告]
+    
+    GenerateReport --> Success[🎉 处理完成]
+    
+    Error1 --> End([❌ 程序终止])
+    Error2 --> End
+    Error3 --> End
+    Error4 --> End
+    
+    Success --> End2([✅ 程序结束])`;
+        }
+
+        function loadDecisionTree() {
+            document.getElementById('mermaidCode').value = `flowchart TD
+    OrderData[📋 订单记录] --> CheckBuyerShipping{买家运费 = 0?}
+    
+    CheckBuyerShipping -->|✅ 是| UseFBA1[💰 实际配送费 = FBA费]
+    CheckBuyerShipping -->|❌ 否| CheckPromotion{买家运费 + 促销折扣 = 0?}
+    
+    CheckPromotion -->|✅ 是| UseFBA2[💰 实际配送费 = FBA费]
+    CheckPromotion -->|❌ 否| UseAll[💰 实际配送费 = 买家运费 + 促销折扣 + FBA费]
+    
+    UseFBA1 --> CalcUnit[🧮 计算单个实际配送费]
+    UseFBA2 --> CalcUnit
+    UseAll --> CalcUnit
+    
+    CalcUnit --> UnitFormula[📊 单个实际配送费 = 实际配送费 ÷ 数量]
+    UnitFormula --> RoundResult[🔄 保留2位小数]
+    RoundResult --> OutputResult[📤 输出配送费结果]`;
+        }
+
+        function loadCorrection() {
+            document.getElementById('mermaidCode').value = `flowchart TD
+    MSKUReport[📄 MSKU维度利润报表] --> StartCorrection[🔧 开始三重校正]
+    AbnormalData[📊 异常订单费用汇总] --> StartCorrection
+    SKCMinFees[📋 SKC最低费用字典] --> StartCorrection
+    
+    StartCorrection --> Phase1[第一重：异常订单费用校正]
+    Phase1 --> P1Step1[🔍 识别异常订单MSKU]
+    P1Step1 --> P1Step2[💰 映射费用字段]
+    P1Step2 --> P1Step3[➖ 扣除异常费用]
+    P1Step3 --> P1Record[📝 记录第一重校正]
+    
+    P1Record --> Phase2[第二重：FBA配送费理想校正]
+    Phase2 --> P2Step1[📋 获取MSKU对应的SKC]
+    P2Step1 --> P2Step2[🔍 查找SKC最低单个实际配送费]
+    P2Step2 --> P2Step3[🧮 计算理想FBA发货费]
+    P2Step3 --> P2Record[📝 记录第二重校正]
+    
+    P2Record --> Phase3[第三重：头程成本理想校正]
+    Phase3 --> P3Step1[📊 获取SKC最低头程均价]
+    P3Step1 --> P3Step2[🧮 计算理想头程成本]
+    P3Step2 --> P3Record[📝 记录第三重校正]
+    
+    P3Record --> FinalOutput[📤 生成最终校正报告]`;
+        }
+
+        // 页面加载时自动生成示例图
+        window.onload = function() {
+            generateDiagram();
+        };
+    </script>
+</body>
+</html> 

@@ -1,0 +1,610 @@
+{% extends "base.html" %}
+
+{% block title %}帮助文档 - MSKU表现分析器{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- 页面标题 -->
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="mb-0">
+                    <i class="fas fa-question-circle me-2"></i>帮助文档 📚
+                </h4>
+            </div>
+            <div class="card-body">
+                <p class="lead mb-0">
+                    本页面提供详细的使用说明，帮助您更好地使用MSKU表现分析器。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 左侧导航 -->
+    <div class="col-lg-3">
+        <div class="card sticky-top" style="top: 2rem;">
+            <div class="card-header">
+                <h6 class="mb-0">
+                    <i class="fas fa-list me-2"></i>目录
+                </h6>
+            </div>
+            <div class="card-body p-0">
+                <div class="list-group list-group-flush">
+                    <a href="#overview" class="list-group-item list-group-item-action">
+                        <i class="fas fa-info-circle me-2"></i>功能概述
+                    </a>
+                    <a href="#file-requirements" class="list-group-item list-group-item-action">
+                        <i class="fas fa-file-alt me-2"></i>文件要求
+                    </a>
+                    <a href="#usage-steps" class="list-group-item list-group-item-action">
+                        <i class="fas fa-step-forward me-2"></i>使用步骤
+                    </a>
+                    <a href="#calculation-rules" class="list-group-item list-group-item-action">
+                        <i class="fas fa-calculator me-2"></i>计算规则
+                    </a>
+                    <a href="#output-files" class="list-group-item list-group-item-action">
+                        <i class="fas fa-download me-2"></i>输出文件
+                    </a>
+                    <a href="#faq" class="list-group-item list-group-item-action">
+                        <i class="fas fa-question me-2"></i>常见问题
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="col-lg-9">
+        <!-- 功能概述 -->
+        <section id="overview" class="mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-info-circle me-2"></i>功能概述
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p>MSKU表现分析器是一个功能强大的亚马逊订单利润分析与校正工具，主要功能包括：</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="border rounded p-3 h-100">
+                                <h6 class="text-primary">
+                                    <i class="fas fa-search me-1"></i>订单分析
+                                </h6>
+                                <ul class="mb-0">
+                                    <li>识别VINE订单</li>
+                                    <li>识别换货订单</li>
+                                    <li>识别新品入仓优惠订单</li>
+                                    <li>识别Hual订单</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="border rounded p-3 h-100">
+                                <h6 class="text-success">
+                                    <i class="fas fa-calculator me-1"></i>配送费计算
+                                </h6>
+                                <ul class="mb-0">
+                                    <li>计算实际配送费用</li>
+                                    <li>考虑买家运费</li>
+                                    <li>考虑FBA费用</li>
+                                    <li>考虑促销折扣</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="border rounded p-3 h-100">
+                                <h6 class="text-warning">
+                                    <i class="fas fa-tools me-1"></i>数据校正
+                                </h6>
+                                <ul class="mb-0">
+                                    <li>校正MSKU维度利润报表</li>
+                                    <li>修正异常订单费用影响</li>
+                                    <li>进行理想校正</li>
+                                    <li>一致性检查</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="border rounded p-3 h-100">
+                                <h6 class="text-info">
+                                    <i class="fas fa-chart-bar me-1"></i>分析报告
+                                </h6>
+                                <ul class="mb-0">
+                                    <li>生成详细分析报表</li>
+                                    <li>MSKU维度汇总</li>
+                                    <li>异常订单统计</li>
+                                    <li>费用一致性检查</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 文件要求 -->
+        <section id="file-requirements" class="mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-file-alt me-2"></i>文件要求详细说明
+                    </h5>
+                </div>
+                <div class="card-body">
+                    {% for file_type, requirements in file_requirements.items() %}
+                    <div class="border rounded p-4 mb-4">
+                        <h6 class="text-primary mb-3">
+                            {% if file_type == 'order_profit' %}📊{% endif %}
+                            {% if file_type == 'hual_msku' %}📋{% endif %}
+                            {% if file_type == 'product_info' %}📦{% endif %}
+                            {% if file_type == 'msku_profit' %}📈{% endif %}
+                            {{ requirements.name }}
+                            {% if file_type == 'msku_profit' %}
+                                <span class="badge bg-secondary ms-2">可选</span>
+                            {% else %}
+                                <span class="badge bg-danger ms-2">必填</span>
+                            {% endif %}
+                        </h6>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <strong class="text-muted">文件来源：</strong>
+                                    <p class="mb-0">{{ requirements.source|safe }}</p>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <strong class="text-muted">文件格式：</strong>
+                                    <p class="mb-0">{{ requirements.format|safe }}</p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <strong class="text-muted">
+                                        <i class="fas fa-key me-1"></i>必要字段：
+                                    </strong>
+                                    <div class="mt-2">
+                                        {% for field in requirements.required_fields %}
+                                            <span class="requirement-badge">{{ field }}</span>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-light mb-0">
+                            <i class="fas fa-info-circle me-1"></i>
+                            <strong>说明：</strong>{{ requirements.description }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- 使用步骤 -->
+        <section id="usage-steps" class="mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-step-forward me-2"></i>使用步骤
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="step-indicator">
+                                <div class="step-number">1</div>
+                                <div>
+                                    <strong>准备文件</strong>
+                                    <br><small class="text-muted">从相应系统导出所需文件</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="step-indicator">
+                                <div class="step-number">2</div>
+                                <div>
+                                    <strong>上传文件</strong>
+                                    <br><small class="text-muted">选择并上传准备好的文件</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="step-indicator">
+                                <div class="step-number">3</div>
+                                <div>
+                                    <strong>开始分析</strong>
+                                    <br><small class="text-muted">点击开始分析按钮</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="step-indicator">
+                                <div class="step-number">4</div>
+                                <div>
+                                    <strong>下载结果</strong>
+                                    <br><small class="text-muted">查看并下载分析结果</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 计算规则 -->
+        <section id="calculation-rules" class="mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-calculator me-2"></i>计算规则说明
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <h6 class="text-primary">
+                                <i class="fas fa-shipping-fast me-1"></i>实际配送费计算
+                            </h6>
+                            <div class="border rounded p-3">
+                                <ol>
+                                    <li><strong>当买家运费 = 0时：</strong><br>
+                                        实际配送费 = FBA费
+                                    </li>
+                                    <li><strong>当买家运费 > 0时：</strong>
+                                        <ul>
+                                            <li>如果买家运费 + 促销折扣 = 0<br>
+                                                实际配送费 = FBA费
+                                            </li>
+                                            <li>否则<br>
+                                                实际配送费 = 买家运费 + 促销折扣 + FBA费
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <h6 class="text-success">
+                                <i class="fas fa-tags me-1"></i>特殊订单识别
+                            </h6>
+                            <div class="border rounded p-3">
+                                <ul>
+                                    <li><strong>VINE订单：</strong><br>
+                                        销售额 = 0 且 FBA费 ≠ 0
+                                    </li>
+                                    <li><strong>换货订单：</strong><br>
+                                        销售额 = 0 且 FBA费 = 0
+                                    </li>
+                                    <li><strong>新品入仓优惠订单：</strong><br>
+                                        FBA费 = 0 且 销售额 > 0
+                                    </li>
+                                    <li><strong>Hual订单：</strong><br>
+                                        基于Hual MSKU列表匹配
+                                    </li>
+                                    <li><strong>二手商品订单：</strong><br>
+                                        MSKU前4个字母为"amzn"的订单
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 输出文件 -->
+        <section id="output-files" class="mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-download me-2"></i>输出文件说明
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="border rounded p-3 h-100">
+                                <h6 class="text-warning">
+                                    <i class="fas fa-exclamation-triangle me-1"></i>异常订单数据
+                                </h6>
+                                <p class="text-muted mb-2">包含以下工作表：</p>
+                                <ul class="small">
+                                    <li>VINE订单详情</li>
+                                    <li>换货订单详情</li>
+                                    <li>新品入仓优惠订单详情</li>
+                                    <li>Hual订单详情</li>
+                                    <li>二手商品订单详情</li>
+                                    <li>所有特殊订单汇总</li>
+                                    <li>异常订单费用汇总</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="border rounded p-3 h-100">
+                                <h6 class="text-info">
+                                    <i class="fas fa-shipping-fast me-1"></i>配送费分析
+                                </h6>
+                                <p class="text-muted mb-2">包含以下工作表：</p>
+                                <ul class="small">
+                                    <li>正常订单明细（已排除异常订单）</li>
+                                    <li>MSKU维度汇总（基于正常订单）</li>
+                                    <li>全部订单明细（参考用）</li>
+                                    <li>配送费异常（如果存在）</li>
+                                    <li>头程均价异常（如果存在）</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="border rounded p-3 h-100">
+                                <h6 class="text-success">
+                                    <i class="fas fa-tools me-1"></i>MSKU报表校正
+                                </h6>
+                                <p class="text-muted mb-2">包含以下工作表（可选）：</p>
+                                <ul class="small">
+                                    <li>校正后MSKU报表</li>
+                                    <li>原始MSKU报表</li>
+                                    <li>FBA配送费理想校正记录</li>
+                                    <li>头程成本理想校正记录</li>
+                                    <li>异常订单校正记录</li>
+                                    <li>异常订单费用</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="border rounded p-3 h-100">
+                                <h6 class="text-primary">
+                                    <i class="fas fa-info-circle me-1"></i>使用建议
+                                </h6>
+                                <ul class="small mb-0">
+                                    <li>先查看异常订单数据</li>
+                                    <li>重点关注配送费一致性</li>
+                                    <li>使用校正后的数据进行决策</li>
+                                    <li>定期运行分析保持数据准确性</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section id="faq" class="mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-question me-2"></i>常见问题
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    Q: 上传文件时提示"文件格式不支持"怎么办？
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>请确保文件格式为CSV或Excel格式（.csv, .xlsx, .xls）。如果仍然无法上传，请检查：</p>
+                                    <ul>
+                                        <li>文件是否损坏</li>
+                                        <li>文件大小是否超过50MB</li>
+                                        <li>文件名是否包含特殊字符</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Q: 为什么分析结果中某些字段显示为空？
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>可能的原因包括：</p>
+                                    <ul>
+                                        <li>源文件中缺少相应的列</li>
+                                        <li>列名不匹配（请确保使用标准的列名）</li>
+                                        <li>数据格式问题（如日期格式、数字格式等）</li>
+                                    </ul>
+                                    <p>建议检查源文件的列名和数据格式。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Q: 处理时间过长怎么办？
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>处理时间取决于文件大小和数据量。如果处理时间过长：</p>
+                                    <ul>
+                                        <li>请耐心等待，不要关闭浏览器</li>
+                                        <li>可以尝试分批处理大文件</li>
+                                        <li>检查网络连接是否稳定</li>
+                                    </ul>
+                                    <p>一般情况下，处理10万条记录需要2-5分钟。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    Q: 如何确保数据安全？
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>我们采取以下措施保护您的数据：</p>
+                                    <ul>
+                                        <li>所有文件仅在服务器临时存储，分析完成后自动删除</li>
+                                        <li>数据传输采用HTTPS加密</li>
+                                        <li>不会保存或备份用户上传的敏感数据</li>
+                                        <li>建议在使用后及时下载结果文件</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                    Q: 为什么美国市场订单不允许混合旺季和淡季配送周期？
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>这是因为配送费结构不同：</p>
+                                    <ul>
+                                        <li>美国市场在旺季(10月15日00:00-次年1月14日23:59)和淡季收取不同的配送费率</li>
+                                        <li>为确保配送费分析的准确性，分析器要求所有订单都在同一费率周期内</li>
+                                        <li>混合不同费率周期的订单会导致配送费计算和比较错误，影响分析结果</li>
+                                        <li><strong>支持纯旺季或纯淡季订单分析</strong> - 您可以分别上传旺季订单或淡季订单进行分析</li>
+                                        <li>如需对比旺季和淡季表现，请分别进行两次分析</li>
+                                    </ul>                                    
+                                    <p><strong>重要：</strong>本限制仅适用于美国市场，其他市场无此限制。程序同样支持淡季订单分析。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.timeline {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #dee2e6;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.timeline-content {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+.timeline-content h6 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.sticky-top {
+    z-index: 1020;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 1rem;
+    }
+    
+    .timeline::before {
+        left: 0.5rem;
+    }
+    
+    .timeline-marker {
+        left: -1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.8rem;
+    }
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// 平滑滚动到锚点
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    links.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 100; // 考虑固定导航栏高度
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+                
+                // 更新活跃链接
+                links.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            }
+        });
+    });
+    
+    // 滚动时更新活跃链接
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPos = window.scrollY + 150;
+        
+        sections.forEach(function(section) {
+            const top = section.offsetTop;
+            const bottom = top + section.offsetHeight;
+            const id = section.getAttribute('id');
+            const link = document.querySelector(`a[href="#${id}"]`);
+            
+            if (scrollPos >= top && scrollPos <= bottom) {
+                links.forEach(l => l.classList.remove('active'));
+                if (link) link.classList.add('active');
+            }
+        });
+    });
+});
+</script>
+{% endblock %} 

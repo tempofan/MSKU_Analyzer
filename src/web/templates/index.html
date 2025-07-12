@@ -1,0 +1,642 @@
+{% extends "base.html" %}
+
+{% block title %}MSKU表现分析器 - 主页{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- 欢迎信息 -->
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="mb-0">
+                    <i class="fas fa-rocket me-2"></i>欢迎使用MSKU表现分析器 🎉
+                </h4>
+            </div>
+            <div class="card-body">
+                <p class="lead mb-3">
+                    这是一个功能强大的亚马逊订单利润分析与校正工具，帮助您正确计算实际配送费用和利润数据。
+                </p>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="text-center">
+                            <i class="fas fa-search fa-2x text-primary mb-2"></i>
+                            <h6>订单分析</h6>
+                            <small class="text-muted">识别特殊订单类型</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="text-center">
+                            <i class="fas fa-calculator fa-2x text-success mb-2"></i>
+                            <h6>配送费计算</h6>
+                            <small class="text-muted">准确计算实际费用</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="text-center">
+                            <i class="fas fa-tools fa-2x text-warning mb-2"></i>
+                            <h6>数据校正</h6>
+                            <small class="text-muted">修正异常订单影响</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="text-center">
+                            <i class="fas fa-chart-bar fa-2x text-info mb-2"></i>
+                            <h6>分析报告</h6>
+                            <small class="text-muted">生成详细报表</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 文件上传表单 -->
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-upload me-2"></i>上传分析文件
+                </h5>
+            </div>
+            <div class="card-body">
+                <form id="uploadForm" action="{{ url_for('upload_files') }}" method="post" enctype="multipart/form-data">
+                    
+                    <!-- 订单利润报表 -->
+                    <div class="mb-4">
+                        <label for="order_profit" class="form-label">
+                            <i class="fas fa-file-excel text-success me-1"></i>
+                            <strong>📊 订单利润报表</strong>
+                            <span class="badge bg-danger ms-1">必填</span>
+                        </label>
+                        <div class="file-upload-area" onclick="document.getElementById('order_profit').click();">
+                            <i class="fas fa-cloud-upload-alt fa-2x text-muted mb-2"></i>
+                            <p class="mb-1">点击选择文件或拖拽文件到此处</p>
+                            <small class="text-muted">支持 CSV 或 Excel 格式</small>
+                        </div>
+                        <input type="file" class="form-control d-none" id="order_profit" name="order_profit" 
+                               accept=".csv,.xlsx,.xls" required>
+                        <div class="file-info mt-2" id="order_profit_info"></div>
+                        <div class="alert alert-info mt-2 py-2">
+                            <i class="fas fa-info-circle me-1"></i>
+                            <small><strong>配送周期要求：</strong>美国市场订单不允许混合旺季(10月15日00:00-次年1月14日23:59)和淡季配送费结算周期，需要全部为旺季或全部为淡季。<br>
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- Hual MSKU列表 -->
+                    <div class="mb-4">
+                        <label for="hual_msku" class="form-label">
+                            <i class="fas fa-list text-info me-1"></i>
+                            <strong>📋 Hual MSKU列表</strong>
+                            <span class="badge bg-danger ms-1">必填</span>
+                        </label>
+                        <div class="file-upload-area" onclick="document.getElementById('hual_msku').click();">
+                            <i class="fas fa-cloud-upload-alt fa-2x text-muted mb-2"></i>
+                            <p class="mb-1">点击选择文件或拖拽文件到此处</p>
+                            <small class="text-muted">Excel 格式</small>
+                        </div>
+                        <input type="file" class="form-control d-none" id="hual_msku" name="hual_msku" 
+                               accept=".xlsx,.xls" required>
+                        <div class="file-info mt-2" id="hual_msku_info"></div>
+                    </div>
+
+                    <!-- 产品资料表 -->
+                    <div class="mb-4">
+                        <label for="product_info" class="form-label">
+                            <i class="fas fa-box text-warning me-1"></i>
+                            <strong>📦 产品资料表</strong>
+                            <span class="badge bg-danger ms-1">必填</span>
+                        </label>
+                        <div class="file-upload-area" onclick="document.getElementById('product_info').click();">
+                            <i class="fas fa-cloud-upload-alt fa-2x text-muted mb-2"></i>
+                            <p class="mb-1">点击选择文件或拖拽文件到此处</p>
+                            <small class="text-muted">Excel 格式，"单个产品"工作表</small>
+                        </div>
+                        <input type="file" class="form-control d-none" id="product_info" name="product_info" 
+                               accept=".xlsx,.xls" required>
+                        <div class="file-info mt-2" id="product_info_info"></div>
+                    </div>
+
+                    <!-- MSKU维度利润报表（可选） -->
+                    <div class="mb-4">
+                        <label for="msku_profit" class="form-label">
+                            <i class="fas fa-chart-line text-secondary me-1"></i>
+                            <strong>📈 MSKU维度利润报表</strong>
+                            <span class="badge bg-secondary ms-1">可选</span>
+                        </label>
+                        <div class="file-upload-area" onclick="document.getElementById('msku_profit').click();">
+                            <i class="fas fa-cloud-upload-alt fa-2x text-muted mb-2"></i>
+                            <p class="mb-1">点击选择文件或拖拽文件到此处</p>
+                            <small class="text-muted">Excel 格式，用于数据校正</small>
+                        </div>
+                        <input type="file" class="form-control d-none" id="msku_profit" name="msku_profit" 
+                               accept=".xlsx,.xls">
+                        <div class="file-info mt-2" id="msku_profit_info"></div>
+                    </div>
+
+                    <!-- 提交按钮 -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+                            <i class="fas fa-play me-2"></i>开始分析
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 文件要求说明 -->
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-info-circle me-2"></i>文件要求说明
+                </h5>
+            </div>
+            <div class="card-body">
+                {% for file_type, requirements in file_requirements.items() %}
+                <div class="mb-4">
+                    <h6 class="text-primary">
+                        {% if file_type == 'order_profit' %}📊{% endif %}
+                        {% if file_type == 'hual_msku' %}📋{% endif %}
+                        {% if file_type == 'product_info' %}📦{% endif %}
+                        {% if file_type == 'msku_profit' %}📈{% endif %}
+                        {{ requirements.name }}
+                    </h6>
+                    
+                    <div class="mb-2">
+                        <small class="text-muted">
+                            {{ requirements.source|safe }}
+                        </small>
+                    </div>
+                    
+                    <div class="mb-2">
+                        <small class="text-muted">
+                            {{ requirements.format|safe }}
+                        </small>
+                    </div>
+                    
+                    <div class="mb-2">
+                        <small class="text-muted d-block">
+                            <i class="fas fa-key me-1"></i>
+                            <strong>必要字段：</strong>
+                        </small>
+                        {% for field in requirements.required_fields %}
+                            <span class="requirement-badge">{{ field }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="mb-2">
+                        <small class="text-muted">{{ requirements.description }}</small>
+                    </div>
+                    
+                    {% if not loop.last %}<hr>{% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- 处理流程说明 -->
+        <div class="card mt-3">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-cogs me-2"></i>处理流程
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="step-indicator">
+                    <div class="step-number">1</div>
+                    <div>
+                        <strong>文件读取</strong>
+                        <br><small class="text-muted">读取并验证上传的文件</small>
+                    </div>
+                </div>
+                <div class="step-indicator">
+                    <div class="step-number">2</div>
+                    <div>
+                        <strong>配送费计算</strong>
+                        <br><small class="text-muted">计算实际配送费用</small>
+                    </div>
+                </div>
+                <div class="step-indicator">
+                    <div class="step-number">3</div>
+                    <div>
+                        <strong>订单分类</strong>
+                        <br><small class="text-muted">识别特殊订单类型</small>
+                    </div>
+                </div>
+                <div class="step-indicator">
+                    <div class="step-number">4</div>
+                    <div>
+                        <strong>数据分析</strong>
+                        <br><small class="text-muted">生成分析报告</small>
+                    </div>
+                </div>
+                <div class="step-indicator">
+                    <div class="step-number">5</div>
+                    <div>
+                        <strong>结果输出</strong>
+                        <br><small class="text-muted">下载分析结果</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// 文件上传处理
+document.addEventListener('DOMContentLoaded', function() {
+    const fileInputs = ['order_profit', 'hual_msku', 'product_info', 'msku_profit'];
+    
+    fileInputs.forEach(function(inputId) {
+        const input = document.getElementById(inputId);
+        const info = document.getElementById(inputId + '_info');
+        
+        input.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const fileSize = (file.size / 1024 / 1024).toFixed(2);
+                info.innerHTML = `
+                    <div class="alert alert-success py-2">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <strong>${file.name}</strong> (${fileSize} MB)
+                    </div>
+                `;
+                
+                // 根据文件类型进行相应的检查
+                if (inputId === 'order_profit') {
+                    checkOrderProfitFile(file, info);
+                } else if (inputId === 'hual_msku') {
+                    checkHualMskuFile(file, info);
+                } else if (inputId === 'product_info') {
+                    checkProductInfoFile(file, info);
+                } else if (inputId === 'msku_profit') {
+                    checkMskuProfitFile(file, info);
+                }
+            } else {
+                info.innerHTML = '';
+            }
+        });
+    });
+
+    // 获取订单利润报表的帮助信息
+    function getOrderProfitHelpMessage(error) {
+        if (error.includes('混合结算周期') || error.includes('混合配送周期')) {
+            return '美国市场不允许混合配送周期，请选择全部在旺季(10月15日00:00-次年1月14日23:59)或全部在淡季的订单数据';
+        } else if (error.includes('缺少必要字段')) {
+            return '请检查文件是否包含所有必要字段，表头是否在第二行';
+        } else if (error.includes('Refund')) {
+            return '请从数据中移除费用类型为"Refund"的记录';
+        } else if (error.includes('结算时间')) {
+            return '请检查"结算时间"列是否存在且格式正确';
+        } else if (error.includes('多个不同国家')) {
+            return '订单数据必须来自同一个国家，请检查"国家"列数据';
+        } else {
+            return '请检查文件格式和内容是否正确';
+        }
+    }
+
+    // 通用网络错误处理函数
+    function handleNetworkError(error, file, infoElement) {
+        console.error('检查文件时出错:', error);
+        
+        // 检查是否是网络连接问题
+        if (error.name === 'TypeError' || error.message.includes('fetch') || error.message.includes('Failed to fetch')) {
+            infoElement.innerHTML = `
+                <div class="alert alert-info py-2">
+                    <i class="fas fa-wifi me-2"></i>
+                    <strong>${file.name}</strong>
+                    <br><small class="text-info">🔄 离线模式：文件将在提交时进行检查</small>
+                    <br><small class="text-muted">
+                        <i class="fas fa-info-circle me-1"></i>
+                        请确保文件格式正确，提交后会进行完整验证
+                    </small>
+                </div>
+            `;
+        } else {
+            infoElement.innerHTML = `
+                <div class="alert alert-warning py-2">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    <strong>${file.name}</strong>
+                    <br><small class="text-warning">⚠️ 检查文件时出现错误，请稍后重试</small>
+                    <br><small class="text-muted">错误: ${error.message}</small>
+                </div>
+            `;
+        }
+    }
+
+    // 检查订单利润报表文件的日期范围
+    function checkOrderProfitFile(file, infoElement) {
+        // 显示检查中状态
+        infoElement.innerHTML = `
+            <div class="alert alert-info py-2">
+                <i class="fas fa-spinner fa-spin me-2"></i>
+                <strong>${file.name}</strong> - 正在检查日期范围...
+            </div>
+        `;
+
+        // 创建FormData对象
+        const formData = new FormData();
+        formData.append('file', file);
+
+        // 发送AJAX请求到后端检查API
+        fetch('/check_order_profit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // 检查通过
+                infoElement.innerHTML = `
+                    <div class="alert alert-success py-2">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <strong>${file.name}</strong>
+                        <br><small class="text-success">${data.message}</small>
+                        <br><small class="text-muted">
+                            📅 日期范围: ${data.details.date_range} | 
+                            📊 订单总数: ${data.details.total_orders}
+                        </small>
+                    </div>
+                `;
+            } else {
+                // 检查失败
+                let errorDetails = '';
+                if (data.details) {
+                    errorDetails = `
+                        <br><small class="text-muted">
+                            📅 您的日期范围: ${data.details.date_range}<br>
+                            📊 总订单: ${data.details.total_orders} | 
+                            ✅ 旺季订单: ${data.details.peak_orders} | 
+                            ❌ 非旺季订单: ${data.details.non_peak_orders}
+                        </small>
+                    `;
+                    if (data.details.non_peak_examples) {
+                        errorDetails += `<br><small class="text-muted">❌ 非旺季订单示例: ${data.details.non_peak_examples.join(', ')}</small>`;
+                    }
+                }
+                
+                infoElement.innerHTML = `
+                    <div class="alert alert-danger py-2">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <strong>${file.name}</strong>
+                        <br><small class="text-danger">❌ ${data.error}</small>
+                        ${errorDetails}
+                        <br><small class="text-info">
+                            <i class="fas fa-info-circle me-1"></i>
+                            ${getOrderProfitHelpMessage(data.error)}
+                        </small>
+                    </div>
+                `;
+
+                // 清空文件选择，防止提交无效文件
+                document.getElementById('order_profit').value = '';
+            }
+        })
+        .catch(error => {
+            handleNetworkError(error, file, infoElement);
+        });
+    }
+
+    // 检查Hual MSKU列表文件
+    function checkHualMskuFile(file, infoElement) {
+        infoElement.innerHTML = `
+            <div class="alert alert-info py-2">
+                <i class="fas fa-spinner fa-spin me-2"></i>
+                <strong>${file.name}</strong> - 正在检查文件格式...
+            </div>
+        `;
+
+        const formData = new FormData();
+        formData.append('file', file);
+
+        fetch('/check_hual_msku', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                infoElement.innerHTML = `
+                    <div class="alert alert-success py-2">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <strong>${file.name}</strong>
+                        <br><small class="text-success">${data.message}</small>
+                        <br><small class="text-muted">
+                            📊 总行数: ${data.details.total_rows} | 
+                            ✅ 有效MSKU: ${data.details.valid_msku_count}
+                        </small>
+                    </div>
+                `;
+            } else {
+                infoElement.innerHTML = `
+                    <div class="alert alert-danger py-2">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <strong>${file.name}</strong>
+                        <br><small class="text-danger">❌ ${data.error}</small>
+                        <br><small class="text-info">
+                            <i class="fas fa-info-circle me-1"></i>
+                            请确保文件包含MSKU列且有有效数据
+                        </small>
+                    </div>
+                `;
+                document.getElementById('hual_msku').value = '';
+            }
+        })
+        .catch(error => {
+            handleNetworkError(error, file, infoElement);
+        });
+    }
+
+    // 检查产品资料表文件
+    function checkProductInfoFile(file, infoElement) {
+        infoElement.innerHTML = `
+            <div class="alert alert-info py-2">
+                <i class="fas fa-spinner fa-spin me-2"></i>
+                <strong>${file.name}</strong> - 正在检查文件格式...
+            </div>
+        `;
+
+        const formData = new FormData();
+        formData.append('file', file);
+
+        fetch('/check_product_info', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                infoElement.innerHTML = `
+                    <div class="alert alert-success py-2">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <strong>${file.name}</strong>
+                        <br><small class="text-success">${data.message}</small>
+                        <br><small class="text-muted">
+                            📄 工作表: ${data.details.sheet_name} | 
+                            📊 总行数: ${data.details.total_rows} | 
+                            ✅ 有效行数: ${data.details.valid_rows}
+                            <br>🔑 SKU字段: ${data.details.sku_field}
+                        </small>
+                    </div>
+                `;
+            } else {
+                infoElement.innerHTML = `
+                    <div class="alert alert-danger py-2">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <strong>${file.name}</strong>
+                        <br><small class="text-danger">❌ ${data.error}</small>
+                        <br><small class="text-info">
+                            <i class="fas fa-info-circle me-1"></i>
+                            请确保文件包含SKC、MSKU、SKU、品质等必要字段
+                        </small>
+                    </div>
+                `;
+                document.getElementById('product_info').value = '';
+            }
+        })
+        .catch(error => {
+            handleNetworkError(error, file, infoElement);
+        });
+    }
+
+    // 检查MSKU维度利润报表文件
+    function checkMskuProfitFile(file, infoElement) {
+        infoElement.innerHTML = `
+            <div class="alert alert-info py-2">
+                <i class="fas fa-spinner fa-spin me-2"></i>
+                <strong>${file.name}</strong> - 正在检查文件格式...
+            </div>
+        `;
+
+        const formData = new FormData();
+        formData.append('file', file);
+
+        fetch('/check_msku_profit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                infoElement.innerHTML = `
+                    <div class="alert alert-success py-2">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <strong>${file.name}</strong>
+                        <br><small class="text-success">${data.message}</small>
+                        <br><small class="text-muted">
+                            📊 总行数: ${data.details.total_rows} | 
+                            ✅ 有效MSKU: ${data.details.valid_msku_count}
+                        </small>
+                    </div>
+                `;
+            } else {
+                infoElement.innerHTML = `
+                    <div class="alert alert-danger py-2">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <strong>${file.name}</strong>
+                        <br><small class="text-danger">❌ ${data.error}</small>
+                        <br><small class="text-info">
+                            <i class="fas fa-info-circle me-1"></i>
+                            请确保文件表头在第二行，包含MSKU、FBA发货费等必要字段
+                        </small>
+                    </div>
+                `;
+                document.getElementById('msku_profit').value = '';
+            }
+        })
+        .catch(error => {
+            handleNetworkError(error, file, infoElement);
+        });
+    }
+
+    // 表单提交处理
+    const form = document.getElementById('uploadForm');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    form.addEventListener('submit', function(e) {
+        // 检查必填文件
+        const requiredFiles = ['order_profit', 'hual_msku', 'product_info'];
+        let hasAllFiles = true;
+        
+        requiredFiles.forEach(function(inputId) {
+            const input = document.getElementById(inputId);
+            if (!input.files[0]) {
+                hasAllFiles = false;
+            }
+        });
+        
+        if (!hasAllFiles) {
+            e.preventDefault();
+            alert('❌ 请选择所有必填文件！');
+            return;
+        }
+        
+        // 检查所有必填文件是否都通过了验证
+        const fileChecks = [
+            { id: 'order_profit', name: '订单利润报表' },
+            { id: 'hual_msku', name: 'Hual MSKU列表' },
+            { id: 'product_info', name: '产品资料表' }
+        ];
+        
+        for (let check of fileChecks) {
+            const fileInfo = document.getElementById(check.id + '_info');
+            const fileSuccess = fileInfo.querySelector('.alert-success');
+            
+            if (!fileSuccess) {
+                e.preventDefault();
+                alert(`❌ ${check.name}未通过验证检查，请重新选择符合要求的文件！`);
+                return;
+            }
+        }
+        
+        // 显示加载状态
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="loading-spinner me-2"></span>正在处理...';
+        
+        // 显示进度提示
+        const progressDiv = document.createElement('div');
+        progressDiv.className = 'alert alert-info mt-3';
+        progressDiv.innerHTML = `
+            <i class="fas fa-info-circle me-2"></i>
+            <strong>正在处理您的文件...</strong>
+            <br>这可能需要几分钟时间，请耐心等待。
+        `;
+        form.appendChild(progressDiv);
+    });
+
+    // 拖拽上传功能
+    fileInputs.forEach(function(inputId) {
+        const uploadArea = document.querySelector(`[onclick="document.getElementById('${inputId}').click();"]`);
+        
+        uploadArea.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            this.classList.add('dragover');
+        });
+        
+        uploadArea.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            this.classList.remove('dragover');
+        });
+        
+        uploadArea.addEventListener('drop', function(e) {
+            e.preventDefault();
+            this.classList.remove('dragover');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                const input = document.getElementById(inputId);
+                input.files = files;
+                
+                // 手动触发change事件以启动文件检查
+                const event = new Event('change', { bubbles: true });
+                input.dispatchEvent(event);
+            }
+        });
+    });
+});
+</script>
+{% endblock %} 
